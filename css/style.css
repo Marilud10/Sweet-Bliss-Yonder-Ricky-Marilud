@@ -1,0 +1,91 @@
+/*=====================================================
+DULCE ENCANTO
+Style.css
+Autor: Frontend UI
+======================================================*/
+
+
+/*=====================================================
+GOOGLE FONTS
+======================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+/*=====================================================
+RESET
+======================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:#F8F6F4;
+
+    color:#3D322F;
+
+    font-family:'Poppins',sans-serif;
+
+    overflow-x:hidden;
+
+    line-height:1.6;
+}
+
+img{
+
+    display:block;
+
+    width:100%;
+
+    object-fit:cover;
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+}
+
+ul{
+
+    list-style:none;
+}
+
+button{
+
+    border:none;
+
+    cursor:pointer;
+
+    font-family:inherit;
+}
+
+input,
+textarea,
+select{
+
+    outline:none;
+
+    border:none;
+
+    font-family:inherit;
+}
+
+section{
+
+    padding:100px 8%;
+}
+
+main{
+
+    width:100%;
+}
