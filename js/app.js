@@ -678,6 +678,73 @@ class ContactSection extends BaseComponent {
 
     render() {
 
+        this.innerHTML = `
+
+            <section class="contact-section">
+
+                <header class="section-header">
+                    <h2>Contáctanos</h2>
+                    <p>
+                        ¿Tienes dudas o quieres hacer un
+                        pedido especial? Escríbenos.
+                    </p>
+                </header>
+
+                <section class="contact-content">
+
+                    <article class="contact-info">
+
+                        <h3>Información de contacto</h3>
+
+                        <ul>
+                            <li>📍 Calle Falsa 123, Bogotá</li>
+                            <li>📞 +57 300 000 0000</li>
+                            <li>✉️ contacto@sweetdreams.com</li>
+                            <li>🕒 Lun - Sáb: 9:00 am - 7:00 pm</li>
+                        </ul>
+
+                    </article>
+
+                    <form class="contact-form" id="formContacto">
+
+                        <label for="contactoNombre">Nombre</label>
+                        <input
+                            type="text"
+                            id="contactoNombre"
+                            name="nombre"
+                            placeholder="Tu nombre"
+                            required>
+
+                        <label for="contactoCorreo">Correo</label>
+                        <input
+                            type="email"
+                            id="contactoCorreo"
+                            name="correo"
+                            placeholder="tucorreo@email.com"
+                            required>
+
+                        <label for="contactoMensaje">Mensaje</label>
+                        <textarea
+                            id="contactoMensaje"
+                            name="mensaje"
+                            rows="4"
+                            placeholder="Escribe tu mensaje..."
+                            required></textarea>
+
+                        <button type="submit">
+                            Enviar Mensaje
+                        </button>
+
+                    </form>
+
+                </section>
+
+            </section>
+
+        `;
+
+        this.registrarEventos();
+
         this.dispatchEvent(
 
             new CustomEvent("contact-ready", {
@@ -686,6 +753,48 @@ class ContactSection extends BaseComponent {
 
             })
 
+        );
+
+    }
+
+    registrarEventos() {
+
+        const formulario =
+            this.querySelector("#formContacto");
+
+        if (!formulario) return;
+
+        formulario.addEventListener(
+            "submit",
+            evento => {
+
+                evento.preventDefault();
+
+                const datos =
+                    new FormData(formulario);
+
+                const nombre =
+                    datos.get("nombre")?.trim();
+
+                if (!nombre) {
+
+                    Utils.mensaje(
+                        "Por favor ingresa tu nombre."
+                    );
+
+                    return;
+
+                }
+
+                Utils.mensaje(
+
+                    `Gracias ${nombre}, hemos recibido tu mensaje. Te contactaremos pronto.`
+
+                );
+
+                formulario.reset();
+
+            }
         );
 
     }
