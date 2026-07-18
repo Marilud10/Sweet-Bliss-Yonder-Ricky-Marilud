@@ -1,0 +1,814 @@
+/* ============================================================
+   SWEET DREAMS
+   admin.css
+   ------------------------------------------------------------
+   Misma identidad "porcelana de pastelería" que style.css,
+   adaptada a tablas, formularios y tarjetas del panel admin.
+============================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600;700&display=swap");
+
+
+/* ============================================================
+   TOKENS
+============================================================ */
+
+:root {
+
+    --sd-white: #ffffff;
+    --sd-porcelain: #f3f8fd;
+    --sd-powder: #dbe9fa;
+    --sd-sky: #6fa6e0;
+    --sd-cobalt: #1d4c8b;
+    --sd-navy: #10233f;
+    --sd-ink: #1b2733;
+    --sd-success: #2f855a;
+    --sd-success-bg: #e4f4ea;
+    --sd-danger: #b3432b;
+    --sd-danger-bg: #fbe9e4;
+    --sd-warning: #a3720f;
+    --sd-warning-bg: #fbf1de;
+
+    --font-display: "Fraunces", "Iowan Old Style", serif;
+    --font-body: "Work Sans", "Segoe UI", sans-serif;
+
+    --space-1: 0.5rem;
+    --space-2: 1rem;
+    --space-3: 1.5rem;
+    --space-4: 2.5rem;
+    --space-5: 4rem;
+
+    --radius-s: 8px;
+    --radius-m: 14px;
+    --radius-pill: 999px;
+
+    --shadow-soft: 0 12px 30px -18px rgba(16, 35, 63, 0.35);
+    --shadow-lift: 0 20px 45px -20px rgba(16, 35, 63, 0.45);
+
+    --content-width: 1180px;
+    --header-height: 76px;
+
+}
+
+
+/* ============================================================
+   RESET
+============================================================ */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+h1, h2, h3, h4, p {
+    margin: 0;
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+button, input, select, textarea {
+    font: inherit;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+:focus-visible {
+    outline: 3px solid var(--sd-sky);
+    outline-offset: 2px;
+    border-radius: var(--radius-s);
+}
+
+
+/* ============================================================
+   BASE
+============================================================ */
+
+body {
+
+    font-family: var(--font-body);
+    color: var(--sd-ink);
+    background: var(--sd-porcelain);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+
+}
+
+h1, h2, h3 {
+    font-family: var(--font-display);
+    color: var(--sd-navy);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+h2 { font-size: 1.6rem; }
+h3 { font-size: 1.05rem; }
+
+p {
+    color: #52667e;
+}
+
+
+/* ============================================================
+   LAYOUT GENERAL
+============================================================ */
+
+main {
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: var(--space-4) var(--space-3) var(--space-5);
+
+}
+
+main > * {
+
+    background: var(--sd-white);
+    border: 1px solid var(--sd-powder);
+    border-radius: var(--radius-m);
+    padding: var(--space-3);
+    box-shadow: var(--shadow-soft);
+
+}
+
+.section-header {
+    margin-bottom: var(--space-3);
+}
+
+.section-header p {
+    margin-top: 0.25rem;
+}
+
+
+/* ============================================================
+   BOTONES
+============================================================ */
+
+button {
+
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.55rem 1.1rem;
+    border-radius: var(--radius-pill);
+    font-weight: 600;
+    font-size: 0.85rem;
+    background: var(--sd-cobalt);
+    color: var(--sd-white);
+    transition: background 0.15s ease, transform 0.15s ease;
+
+}
+
+button:hover {
+    background: var(--sd-navy);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+/* Acciones secundarias / destructivas dentro de tablas */
+.btn-eliminar,
+.btn-delete-category,
+.btn-delete-sale,
+.btn-eliminar-cliente,
+.btn-eliminar-promocion {
+    background: var(--sd-danger);
+}
+
+.btn-eliminar:hover,
+.btn-delete-category:hover,
+.btn-delete-sale:hover,
+.btn-eliminar-cliente:hover,
+.btn-eliminar-promocion:hover {
+    background: #8f3520;
+}
+
+.btn-editar,
+.btn-edit-category,
+.btn-editar-venta,
+.btn-editar-cliente,
+.btn-editar-promocion,
+.btn-ver,
+.btn-ver-cliente,
+.btn-ver-promocion {
+    background: transparent;
+    color: var(--sd-cobalt);
+    border: 1.5px solid var(--sd-cobalt);
+}
+
+.btn-editar:hover,
+.btn-edit-category:hover,
+.btn-editar-venta:hover,
+.btn-editar-cliente:hover,
+.btn-editar-promocion:hover,
+.btn-ver:hover,
+.btn-ver-cliente:hover,
+.btn-ver-promocion:hover {
+    background: var(--sd-porcelain);
+}
+
+.btn-stock-plus,
+.btn-stock-minus {
+    padding: 0.3rem 0.7rem;
+    font-size: 0.9rem;
+}
+
+.btn-stock-minus {
+    background: var(--sd-powder);
+    color: var(--sd-cobalt);
+}
+
+
+/* ============================================================
+   BUSCADORES Y FILTROS
+============================================================ */
+
+input[type="search"],
+input[type="text"],
+input[type="email"],
+select {
+
+    padding: 0.6rem 0.9rem;
+    border: 1.5px solid var(--sd-powder);
+    border-radius: var(--radius-s);
+    background: var(--sd-white);
+    font-size: 0.9rem;
+    transition: border-color 0.15s ease;
+
+}
+
+input:focus,
+select:focus {
+    border-color: var(--sd-cobalt);
+    outline: none;
+}
+
+label {
+
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--sd-cobalt);
+    margin-bottom: 0.3rem;
+
+}
+
+.products-search,
+.customers-search,
+.orders-filters {
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    gap: var(--space-2);
+    margin-bottom: var(--space-3);
+
+}
+
+.products-toolbar,
+.categories-toolbar,
+.promotions-toolbar {
+
+    display: flex;
+    gap: var(--space-1);
+    flex-wrap: wrap;
+    margin-bottom: var(--space-3);
+
+}
+
+
+/* ============================================================
+   TABLAS
+============================================================ */
+
+.products-table,
+.categories-table,
+.orders-table,
+.customers-table,
+.promotions-table {
+    overflow-x: auto;
+}
+
+thead th {
+
+    text-align: left;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--sd-white);
+    background: var(--sd-cobalt);
+    padding: 0.75rem 1rem;
+
+}
+
+thead th:first-child {
+    border-top-left-radius: var(--radius-s);
+}
+
+thead th:last-child {
+    border-top-right-radius: var(--radius-s);
+}
+
+tbody tr {
+    border-bottom: 1px solid var(--sd-porcelain);
+}
+
+tbody tr:hover {
+    background: var(--sd-porcelain);
+}
+
+tbody td {
+    padding: 0.85rem 1rem;
+    font-size: 0.9rem;
+    vertical-align: middle;
+}
+
+tbody td:has(button) {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+}
+
+/* Fallback para navegadores sin soporte de :has() */
+tbody td button + button {
+    margin-left: 0.4rem;
+}
+
+/* Custom elements de fila: se aplanan para no romper la tabla */
+product-row,
+category-row,
+inventory-row,
+sale-row,
+customer-row,
+promotion-row {
+    display: contents;
+}
+
+
+/* ============================================================
+   ESTADOS
+============================================================ */
+
+/*
+   Nota: para pintar "Disponible/Agotado" o "Activa/Programada"
+   con color según su valor, lo más robusto es que las filas
+   (product-row, sale-row, etc.) agreguen una clase según el
+   estado, p. ej. <td class="estado estado--ok">Disponible</td>.
+   Mientras tanto se deja un estilo neutro consistente:
+*/
+
+tbody td:nth-last-child(2) {
+    font-weight: 600;
+}
+
+
+/* ============================================================
+   ADMIN HEADER
+============================================================ */
+
+admin-header {
+    display: block;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.admin-header {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+    height: var(--header-height);
+    padding: 0 var(--space-3);
+    background: var(--sd-white);
+    border-bottom: 2px solid var(--sd-cobalt);
+
+}
+
+.admin-header__brand h1 {
+
+    font-size: 1.3rem;
+    font-style: italic;
+    font-weight: 500;
+    color: var(--sd-cobalt);
+
+}
+
+.admin-navigation ul {
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+
+}
+
+.admin-navigation a {
+
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--sd-navy);
+    padding: 0.4rem 0.1rem;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.15s ease, color 0.15s ease;
+
+}
+
+.admin-navigation a:hover {
+    color: var(--sd-cobalt);
+    border-color: var(--sd-sky);
+}
+
+.admin-user {
+
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    text-align: right;
+
+}
+
+.admin-user h3 {
+    font-size: 0.85rem;
+}
+
+.admin-user p {
+    font-size: 0.75rem;
+    color: #7387a0;
+}
+
+.admin-user button {
+    background: var(--sd-powder);
+    color: var(--sd-cobalt);
+}
+
+.admin-user button:hover {
+    background: var(--sd-sky);
+    color: var(--sd-white);
+}
+
+@media (max-width: 760px) {
+
+    .admin-header {
+        flex-wrap: wrap;
+        height: auto;
+        padding: var(--space-2);
+    }
+
+    .admin-user {
+        display: none;
+    }
+
+}
+
+
+/* ============================================================
+   DASHBOARD HOME
+============================================================ */
+
+.dashboard-cards {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: var(--space-2);
+
+}
+
+dashboard-card {
+    display: contents;
+}
+
+.dashboard-card {
+
+    background: var(--sd-porcelain);
+    border: 1px solid var(--sd-powder);
+    border-radius: var(--radius-m);
+    padding: var(--space-3);
+    text-align: center;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+}
+
+.dashboard-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-soft);
+}
+
+.dashboard-card span {
+    font-size: 1.6rem;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.dashboard-card h3 {
+
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--sd-cobalt);
+    margin-bottom: 0.2rem;
+
+}
+
+.dashboard-card h2 {
+    font-size: 1.5rem;
+    color: var(--sd-navy);
+}
+
+.dashboard-summary {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3);
+    margin-top: var(--space-3);
+
+}
+
+.dashboard-summary article {
+
+    background: var(--sd-porcelain);
+    border-radius: var(--radius-m);
+    padding: var(--space-3);
+
+}
+
+.dashboard-summary h3 {
+    margin-bottom: var(--space-1);
+    font-size: 0.95rem;
+}
+
+.dashboard-summary ol,
+.dashboard-summary ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.dashboard-summary li {
+
+    background: var(--sd-white);
+    border-radius: var(--radius-s);
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+
+}
+
+@media (max-width: 700px) {
+
+    .dashboard-summary {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* ============================================================
+   TOOLBARS ADICIONALES
+============================================================ */
+
+.orders-toolbar,
+.customers-toolbar {
+
+    display: flex;
+    gap: var(--space-1);
+    margin-bottom: var(--space-3);
+
+}
+
+
+/* ============================================================
+   ADMIN MODAL
+============================================================ */
+
+.admin-modal {
+
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-3);
+
+}
+
+.admin-modal[hidden] {
+    display: none;
+}
+
+.admin-modal__backdrop {
+
+    position: absolute;
+    inset: 0;
+    background: rgba(16, 35, 63, 0.55);
+
+}
+
+.admin-modal__panel {
+
+    position: relative;
+    background: var(--sd-white);
+    border-radius: var(--radius-m);
+    max-width: 560px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: var(--shadow-lift);
+
+}
+
+.admin-modal__header {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-3);
+    border-bottom: 1px solid var(--sd-powder);
+    position: sticky;
+    top: 0;
+    background: var(--sd-white);
+
+}
+
+.admin-modal__header h3 {
+    font-size: 1.1rem;
+}
+
+.admin-modal__cerrar {
+
+    background: var(--sd-porcelain);
+    color: var(--sd-cobalt);
+    border-radius: var(--radius-pill);
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    font-size: 0.9rem;
+
+}
+
+.admin-modal__cuerpo {
+    padding: var(--space-3);
+}
+
+.admin-modal__form {
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+
+}
+
+.admin-modal__form label {
+    margin-top: var(--space-1);
+}
+
+.admin-modal__guardar {
+    margin-top: var(--space-3);
+    width: 100%;
+    justify-content: center;
+}
+
+.admin-modal__producto-selector {
+
+    display: grid;
+    grid-template-columns: 1fr 90px auto;
+    gap: 0.5rem;
+    align-items: center;
+
+}
+
+.admin-modal__producto-selector select,
+.admin-modal__producto-selector input {
+    margin: 0;
+}
+
+.admin-modal__producto-selector button {
+    background: var(--sd-porcelain);
+    color: var(--sd-cobalt);
+    white-space: nowrap;
+}
+
+.admin-modal__items {
+
+    margin: var(--space-2) 0;
+    border: 1px solid var(--sd-powder);
+    border-radius: var(--radius-s);
+    max-height: 160px;
+    overflow-y: auto;
+
+}
+
+.admin-modal__items li {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+    border-bottom: 1px solid var(--sd-porcelain);
+
+}
+
+.admin-modal__items li:last-child {
+    border-bottom: none;
+}
+
+.admin-modal__items button {
+
+    background: transparent;
+    color: var(--sd-danger);
+    padding: 0.2rem 0.5rem;
+    font-size: 0.78rem;
+
+}
+
+
+/* ============================================================
+   ADMIN FOOTER
+============================================================ */
+
+admin-footer {
+    display: block;
+}
+
+.admin-footer {
+
+    background: var(--sd-navy);
+    color: var(--sd-porcelain);
+    border-radius: var(--radius-m);
+    padding: var(--space-4) var(--space-3);
+    text-align: center;
+
+}
+
+.admin-footer__content {
+
+    display: flex;
+    justify-content: center;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+
+}
+
+.admin-footer h3 {
+    color: var(--sd-white);
+    font-size: 1rem;
+}
+
+.admin-footer p {
+    color: var(--sd-porcelain);
+    font-size: 0.85rem;
+}
+
+
+/* ============================================================
+   RESPONSIVE GENERAL
+============================================================ */
+
+@media (max-width: 700px) {
+
+    main {
+        padding: var(--space-2);
+    }
+
+    tbody td,
+    thead th {
+        padding: 0.6rem 0.6rem;
+        font-size: 0.8rem;
+    }
+
+}
+
+
+/* ============================================================
+   FIN DEL ARCHIVO
+============================================================ */

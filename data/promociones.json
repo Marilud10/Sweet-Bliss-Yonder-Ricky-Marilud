@@ -1,0 +1,32 @@
+[
+  {
+    "id": "PR001",
+    "nombre": "2x1 en Cupcakes",
+    "descuento": 50,
+    "aplicaA": "Cupcakes",
+    "inicio": "2026-07-01",
+    "fin": "2026-07-31",
+    "estado": "Activa",
+    "fechaCreacion": "2026-06-25T00:00:00.000Z"
+  },
+  {
+    "id": "PR002",
+    "nombre": "Descuento en Tortas",
+    "descuento": 15,
+    "aplicaA": "Tortas",
+    "inicio": "2026-07-15",
+    "fin": "2026-07-20",
+    "estado": "Activa",
+    "fechaCreacion": "2026-07-01T00:00:00.000Z"
+  },
+  {
+    "id": "PR003",
+    "nombre": "Combo Familiar",
+    "descuento": 20,
+    "aplicaA": "Todos",
+    "inicio": "2026-08-01",
+    "fin": "2026-08-15",
+    "estado": "Programada",
+    "fechaCreacion": "2026-07-10T00:00:00.000Z"
+  }
+]

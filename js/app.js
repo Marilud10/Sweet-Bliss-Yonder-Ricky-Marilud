@@ -16,7 +16,8 @@ const STORAGE_KEYS = Object.freeze({
     PRODUCTOS: "productos",
     CARRITO: "carrito",
     VENTAS: "ventas",
-    INVENTARIO: "inventario"
+    INVENTARIO: "inventario",
+    CATEGORIAS: "categorias"
 });
 
 const APP_CONFIG = Object.freeze({
@@ -45,6 +46,8 @@ const AppState = {
     ventas: [],
 
     inventario: [],
+
+    categorias: [],
 
     categoriaActual: "todos",
 
@@ -188,6 +191,9 @@ const cargarEstado = ()=>{
     AppState.inventario =
         StorageManager.obtener(STORAGE_KEYS.INVENTARIO);
 
+    AppState.categorias =
+        StorageManager.obtener(STORAGE_KEYS.CATEGORIAS);
+
 };
 
 
@@ -227,6 +233,15 @@ const guardarInventario = ()=>{
     StorageManager.guardar(
         STORAGE_KEYS.INVENTARIO,
         AppState.inventario
+    );
+
+};
+
+const guardarCategorias = ()=>{
+
+    StorageManager.guardar(
+        STORAGE_KEYS.CATEGORIAS,
+        AppState.categorias
     );
 
 };
@@ -397,6 +412,44 @@ class HeroBanner extends BaseComponent {
 
     render() {
 
+        this.innerHTML = `
+
+            <section class="hero">
+
+                <div class="hero__content">
+
+                    <p class="eyebrow">Repostería artesanal</p>
+
+                    <h1>Dulces momentos, hechos a mano</h1>
+
+                    <p class="hero__lead">
+                        Tortas, cupcakes y postres fríos preparados
+                        cada día con ingredientes reales, listos
+                        para llevar a tu mesa.
+                    </p>
+
+                    <div class="hero__actions">
+                        <a href="#catalogo" class="btn btn--primary">
+                            Ver Catálogo
+                        </a>
+                        <a href="#nosotros" class="btn btn--ghost">
+                            Conócenos
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="hero__figure">
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJVwRedKIFBTvNCb8shgsN3ubT_5tXk7Nzknx4CRYYLDyU1HlfMp1Ho4T3&s=10"
+                        alt="Postre destacado de Sweet Dreams"
+                        loading="eager">
+                </div>
+
+            </section>
+
+        `;
+
         this.dispatchEvent(
             new CustomEvent("hero-ready", {
                 bubbles: true
@@ -417,6 +470,73 @@ customElements.define("hero-banner", HeroBanner);
 class FeaturedProducts extends BaseComponent {
 
     render() {
+
+        const productos =
+            StorageManager.obtener(STORAGE_KEYS.PRODUCTOS);
+
+        const ventas =
+            StorageManager.obtener(STORAGE_KEYS.VENTAS) || [];
+
+        const cantidadVendidaPorId = {};
+
+        ventas.forEach(venta => {
+
+            (venta.productos || []).forEach(item => {
+
+                cantidadVendidaPorId[item.id] =
+                    (cantidadVendidaPorId[item.id] || 0) +
+                    item.cantidad;
+
+            });
+
+        });
+
+        const destacados = [...productos]
+            .sort((a, b) =>
+                (cantidadVendidaPorId[b.id] ?? 0) -
+                (cantidadVendidaPorId[a.id] ?? 0)
+            )
+            .slice(0, 5);
+
+        this.innerHTML = `
+
+            <div class="section-header">
+                <h2>Nuestros Destacados</h2>
+                <p>
+                    Los 5 productos más vendidos
+                    por nuestros clientes.
+                </p>
+            </div>
+
+            <div class="grid grid--5" id="featuredGrid"></div>
+
+        `;
+
+        const contenedor =
+            this.querySelector("#featuredGrid");
+
+        if (!destacados.length) {
+
+            contenedor.innerHTML = `
+                <p class="catalogo-vacio">
+                    Aún no hay productos disponibles.
+                </p>
+            `;
+
+        } else {
+
+            destacados.forEach(producto => {
+
+                const tarjeta =
+                    document.createElement("product-card");
+
+                tarjeta.data = producto;
+
+                contenedor.appendChild(tarjeta);
+
+            });
+
+        }
 
         this.dispatchEvent(
             new CustomEvent("featured-ready", {
@@ -442,6 +562,36 @@ class PromotionSection extends BaseComponent {
 
     render() {
 
+        const minimo =
+            Utils.moneda(APP_CONFIG.DESCUENTO_MINIMO);
+
+        const porcentaje =
+            APP_CONFIG.PORCENTAJE_DESCUENTO * 100;
+
+        this.innerHTML = `
+
+            <div class="promo-banner">
+
+                <p class="eyebrow">Promoción activa</p>
+
+                <h2>
+                    ${porcentaje}% de descuento en compras
+                    desde ${minimo}
+                </h2>
+
+                <p>
+                    El descuento se aplica automáticamente
+                    en tu carrito, sin necesidad de código.
+                </p>
+
+                <a href="#catalogo" class="btn btn--primary">
+                    Aprovechar ahora
+                </a>
+
+            </div>
+
+        `;
+
         this.dispatchEvent(
             new CustomEvent("promotion-ready", {
                 bubbles: true
@@ -466,6 +616,48 @@ class NewsSection extends BaseComponent {
 
     render() {
 
+        const productos =
+            StorageManager.obtener(STORAGE_KEYS.PRODUCTOS);
+
+        const novedades = productos.slice(-3);
+
+        this.innerHTML = `
+
+            <div class="section-header">
+                <h2>Novedades</h2>
+                <p>Lo último que llegó a la vitrina.</p>
+            </div>
+
+            <div class="grid grid--3" id="newsGrid"></div>
+
+        `;
+
+        const contenedor =
+            this.querySelector("#newsGrid");
+
+        if (!novedades.length) {
+
+            contenedor.innerHTML = `
+                <p class="catalogo-vacio">
+                    Pronto tendremos novedades para ti.
+                </p>
+            `;
+
+        } else {
+
+            novedades.forEach(producto => {
+
+                const tarjeta =
+                    document.createElement("product-card");
+
+                tarjeta.data = producto;
+
+                contenedor.appendChild(tarjeta);
+
+            });
+
+        }
+
         this.dispatchEvent(
             new CustomEvent("news-ready", {
                 bubbles: true
@@ -489,6 +681,17 @@ customElements.define(
 class ShoppingCart extends BaseComponent {
 
     render() {
+
+        this.innerHTML = `
+
+            <div class="section-header">
+                <h2>Tu Carrito</h2>
+                <p>Revisa tus productos antes de continuar.</p>
+            </div>
+
+            <div class="cart-layout" id="carrito-items"></div>
+
+        `;
 
         this.dispatchEvent(
 
@@ -536,6 +739,78 @@ class ProductDetail extends BaseComponent {
 
         if (!this.producto) return;
 
+        const {
+
+            id,
+            nombre,
+            categoria,
+            precio,
+            descripcion,
+            ingredientes,
+            imagen,
+            stock,
+            calificacion,
+            tamaño
+
+        } = this.producto;
+
+        this.innerHTML = `
+
+            <article class="product-detail">
+
+                <button class="product-detail__cerrar" id="cerrarDetalle">
+                    ✕ Cerrar
+                </button>
+
+                <div class="product-detail__layout">
+
+                    <img src="${imagen || 'https://placehold.co/600x600/dbe9fa/1d4c8b?text=Sin+imagen'}" alt="${nombre ?? 'Producto'}" onerror="this.onerror=null;this.src='https://placehold.co/600x600/dbe9fa/1d4c8b?text=Sin+imagen';">
+
+                    <div class="product-detail__info">
+
+                        <span class="badge">${categoria}</span>
+
+                        <h2>${nombre}</h2>
+
+                        <p class="product-detail__precio">
+                            ${Utils.moneda(precio)}
+                        </p>
+
+                        <p>⭐ ${calificacion} · ${tamaño ?? ""}</p>
+
+                        <p>${descripcion ?? ""}</p>
+
+                        <h3>Ingredientes</h3>
+
+                        <ul class="product-detail__ingredientes">
+                            ${(ingredientes ?? [])
+                                .map(item => `<li>${item}</li>`)
+                                .join("")}
+                        </ul>
+
+                        <p class="product-detail__stock">
+                            ${stock > 0
+                                ? `${stock} unidades disponibles`
+                                : "Agotado"}
+                        </p>
+
+                        <button
+                            class="btn btn--primary btn-carrito-detalle"
+                            data-id="${id}"
+                            ${stock <= 0 ? "disabled" : ""}>
+                            Agregar al carrito
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        `;
+
+        this.registrarEventos();
+
         this.dispatchEvent(
 
             new CustomEvent("detail-ready", {
@@ -547,6 +822,40 @@ class ProductDetail extends BaseComponent {
             })
 
         );
+
+    }
+
+    registrarEventos() {
+
+        this.querySelector("#cerrarDetalle")
+            ?.addEventListener("click", () => {
+
+                this.producto = null;
+
+                this.innerHTML = "";
+
+            });
+
+        this.querySelector(".btn-carrito-detalle")
+            ?.addEventListener("click", evento => {
+
+                this.dispatchEvent(
+
+                    new CustomEvent("agregar-carrito", {
+
+                        bubbles: true,
+
+                        composed: true,
+
+                        detail: {
+                            id: evento.target.dataset.id
+                        }
+
+                    })
+
+                );
+
+            });
 
     }
 
@@ -592,7 +901,95 @@ customElements.define(
 
 class CheckoutPage extends BaseComponent {
 
+    connectedCallback() {
+
+        this.render();
+
+        this._onCarritoActualizado = () =>
+            this.actualizarResumen();
+
+        document.addEventListener(
+            "carrito-actualizado",
+            this._onCarritoActualizado
+        );
+
+    }
+
+    disconnectedCallback() {
+
+        document.removeEventListener(
+            "carrito-actualizado",
+            this._onCarritoActualizado
+        );
+
+    }
+
     render() {
+
+        this.innerHTML = `
+
+            <div class="section-header">
+                <h2>Finalizar Compra</h2>
+                <p>Completa tus datos para confirmar el pedido.</p>
+            </div>
+
+            <div class="checkout-layout">
+
+                <form class="checkout-form" id="formCheckout">
+
+                    <label for="checkoutNombre">Nombre completo</label>
+                    <input
+                        type="text"
+                        id="checkoutNombre"
+                        name="nombre"
+                        placeholder="Tu nombre"
+                        required>
+
+                    <label for="checkoutCiudad">Ciudad</label>
+                    <input
+                        type="text"
+                        id="checkoutCiudad"
+                        name="ciudad"
+                        placeholder="Tu ciudad"
+                        required>
+
+                    <label for="checkoutDireccion">Dirección de entrega</label>
+                    <input
+                        type="text"
+                        id="checkoutDireccion"
+                        name="direccion"
+                        placeholder="Calle, número, referencia"
+                        required>
+
+                    <label for="checkoutPago">Método de pago</label>
+                    <select id="checkoutPago" name="metodoPago">
+                        <option>Tarjeta de crédito</option>
+                        <option>Efectivo contraentrega</option>
+                        <option>Transferencia</option>
+                        <option>PSE</option>
+                    </select>
+
+                    <button type="submit">
+                        Confirmar Pedido
+                    </button>
+
+                </form>
+
+                <aside class="checkout-summary" id="checkoutResumen"></aside>
+
+            </div>
+
+        `;
+
+        this.registrarEventos();
+
+        /**
+         * Se difiere a una microtarea porque calcularSubtotal,
+         * calcularDescuento y calcularTotal se declaran más abajo
+         * en este mismo archivo; para cuando la microtarea se
+         * ejecute, el script ya habrá terminado de cargar.
+         */
+        queueMicrotask(() => this.actualizarResumen());
 
         this.dispatchEvent(
 
@@ -603,6 +1000,97 @@ class CheckoutPage extends BaseComponent {
             })
 
         );
+
+    }
+
+    registrarEventos() {
+
+        const formulario =
+            this.querySelector("#formCheckout");
+
+        if (!formulario) return;
+
+        formulario.addEventListener("submit", evento => {
+
+            evento.preventDefault();
+
+            if (!AppState.carrito.length) {
+
+                Utils.mensaje(
+                    "Tu carrito está vacío."
+                );
+
+                return;
+
+            }
+
+            const datos =
+                new FormData(formulario);
+
+            finalizarCompra({
+
+                nombre: datos.get("nombre"),
+
+                ciudad: datos.get("ciudad"),
+
+                direccion: datos.get("direccion"),
+
+                metodoPago: datos.get("metodoPago")
+
+            });
+
+            formulario.reset();
+
+        });
+
+    }
+
+    actualizarResumen() {
+
+        const resumen =
+            this.querySelector("#checkoutResumen");
+
+        if (!resumen) return;
+
+        if (!AppState.carrito.length) {
+
+            resumen.innerHTML = `
+                <h3>Resumen del pedido</h3>
+                <p>Tu carrito está vacío.</p>
+            `;
+
+            return;
+
+        }
+
+        resumen.innerHTML = `
+
+            <h3>Resumen del pedido</h3>
+
+            <ul>
+                ${AppState.carrito.map(item => `
+                    <li>
+                        ${item.cantidad} × ${item.nombre}
+                    </li>
+                `).join("")}
+            </ul>
+
+            <p>
+                Subtotal:
+                ${Utils.moneda(calcularSubtotal())}
+            </p>
+
+            <p>
+                Descuento:
+                ${Utils.moneda(calcularDescuento())}
+            </p>
+
+            <h2>
+                Total:
+                ${Utils.moneda(calcularTotal())}
+            </h2>
+
+        `;
 
     }
 
@@ -621,6 +1109,58 @@ customElements.define(
 class ProductCatalog extends BaseComponent {
 
     render() {
+
+        const categorias =
+            StorageManager.obtener(STORAGE_KEYS.CATEGORIAS);
+
+        const opciones = categorias
+            .map(categoria =>
+                `<option value="${categoria.nombre}">${categoria.nombre}</option>`
+            )
+            .join("");
+
+        this.innerHTML = `
+
+            <div class="section-header">
+                <h2>Nuestro Catálogo</h2>
+                <p>Encuentra el postre perfecto para cada ocasión.</p>
+            </div>
+
+            <div class="catalog-toolbar">
+
+                <div class="catalog-toolbar__field">
+                    <label for="buscar">Buscar</label>
+                    <input
+                        type="search"
+                        id="buscar"
+                        placeholder="Nombre, ingrediente...">
+                </div>
+
+                <div class="catalog-toolbar__field">
+                    <label for="categoria">Categoría</label>
+                    <select id="categoria">
+                        <option value="todos">Todas</option>
+                        ${opciones}
+                    </select>
+                </div>
+
+                <div class="catalog-toolbar__field">
+                    <label for="orden">Ordenar por</label>
+                    <select id="orden">
+                        <option value="default">Relevancia</option>
+                        <option value="precio-asc">Precio: menor a mayor</option>
+                        <option value="precio-desc">Precio: mayor a menor</option>
+                        <option value="nombre">Nombre A-Z</option>
+                        <option value="calificacion">Mejor calificados</option>
+                        <option value="stock">Disponibilidad</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="grid grid--4" id="catalogo-grid"></div>
+
+        `;
 
         this.dispatchEvent(
 
@@ -649,6 +1189,52 @@ customElements.define(
 class AboutUs extends BaseComponent {
 
     render() {
+
+        this.innerHTML = `
+
+            <div class="section-header">
+                <h2>Sobre Nosotros</h2>
+                <p>
+                    Repostería casera hecha con ingredientes
+                    reales, todos los días.
+                </p>
+            </div>
+
+            <div class="about-grid">
+
+                <article class="card">
+                    <span class="about-grid__icon">🎂</span>
+                    <h3>Nuestra historia</h3>
+                    <p>
+                        Sweet Dreams nació de la idea simple de
+                        llevar postres artesanales a cada mesa,
+                        preparados en pequeños lotes cada día.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <span class="about-grid__icon">🌾</span>
+                    <h3>Ingredientes reales</h3>
+                    <p>
+                        Sin mezclas industriales ni conservantes
+                        artificiales: mantequilla, huevo y fruta
+                        de verdad en cada receta.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <span class="about-grid__icon">🚚</span>
+                    <h3>Entrega fresca</h3>
+                    <p>
+                        Preparamos por encargo y entregamos el
+                        mismo día para que llegue tan fresco como
+                        salió del horno.
+                    </p>
+                </article>
+
+            </div>
+
+        `;
 
         this.dispatchEvent(
 
@@ -815,6 +1401,71 @@ class AppFooter extends BaseComponent {
 
     render() {
 
+        const year =
+            new Date().getFullYear();
+
+        this.innerHTML = `
+
+            <div class="app-footer__content">
+
+                <article>
+                    <h3>Sweet Dreams</h3>
+                    <p>Repostería artesanal, hecha a mano.</p>
+                </article>
+
+                <article>
+                    <h3>Navegación</h3>
+                    <ul>
+                        <li><a href="#catalogo">Catálogo</a></li>
+                        <li><a href="#promociones">Promociones</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>Contacto</h3>
+                    <p>contacto@sweetdreams.com</p>
+                    <p>+57 300 000 0000</p>
+                </article>
+
+            </div>
+
+            <p class="app-footer__admin">
+                <button id="btnAdminAccess" class="btn btn--primary">
+                    Acceso Administrador
+                </button>
+            </p>
+
+            <p class="app-footer__copy">
+                © ${year} Sweet Dreams. Todos los derechos reservados.
+            </p>
+
+        `;
+
+        this.querySelector("#btnAdminAccess")
+            .addEventListener("click", () => {
+
+                const usuario = prompt("Usuario:");
+
+                if (usuario === null) return;
+
+                const clave = prompt("Contraseña:");
+
+                if (clave === null) return;
+
+                if (usuario === "123" && clave === "123") {
+
+                    window.location.href = "admin.html";
+
+                } else {
+
+                    alert("Usuario o contraseña incorrectos.");
+
+                }
+
+            });
+
         this.dispatchEvent(
 
             new CustomEvent("footer-ready", {
@@ -887,6 +1538,11 @@ const renderAplicacion = () => {
 
     actualizarContadorCarrito();
 
+    const destacados =
+        document.querySelector("#destacados");
+
+    if (destacados) destacados.actualizar();
+
 };
 
 
@@ -920,25 +1576,25 @@ const buscarProductos = (productos) => {
 
         return (
 
-            producto.nombre
+            (producto.nombre ?? "")
                 .toLowerCase()
                 .includes(texto)
 
             ||
 
-            producto.descripcion
+            (producto.descripcion ?? "")
                 .toLowerCase()
                 .includes(texto)
 
             ||
 
-            producto.categoria
+            (producto.categoria ?? "")
                 .toLowerCase()
                 .includes(texto)
 
             ||
 
-            producto.ingredientes
+            (producto.ingredientes ?? [])
                 .join(" ")
                 .toLowerCase()
                 .includes(texto)
@@ -1114,21 +1770,26 @@ class ProductCard extends HTMLElement {
 
         } = this.producto;
 
+        const imagenSegura =
+            imagen ||
+            "https://placehold.co/600x600/dbe9fa/1d4c8b?text=Sin+imagen";
+
         this.innerHTML = `
 
             <article class="product-card">
 
                 <img
-                    src="${imagen}"
-                    alt="${nombre}"
+                    src="${imagenSegura}"
+                    alt="${nombre ?? "Producto"}"
+                    onerror="this.onerror=null;this.src='https://placehold.co/600x600/dbe9fa/1d4c8b?text=Sin+imagen';"
                 >
 
-                <h3>${nombre}</h3>
+                <h3>${nombre ?? "Producto sin nombre"}</h3>
 
-                <p>${categoria}</p>
+                <p>${categoria ?? ""}</p>
 
                 <strong>
-                    ${Utils.moneda(precio)}
+                    ${Utils.moneda(precio ?? 0)}
                 </strong>
 
                 <span>
@@ -1140,13 +1801,6 @@ class ProductCard extends HTMLElement {
                     ${this.estadoStock}
 
                 </small>
-
-                <button
-                    class="btn-detalle"
-                    data-id="${id}"
-                >
-                    Ver detalles
-                </button>
 
                 <button
                     class="btn-carrito"
@@ -1245,8 +1899,17 @@ customElements.define(
 
 const obtenerContenedorCatalogo = () => {
 
+    /**
+     * OJO: apunta al grid interno (#catalogo-grid) y no
+     * a #catalogo directamente, porque #catalogo es el
+     * <product-catalog> completo (incluye buscador, filtro
+     * y orden). Si se limpiara ese contenedor completo en
+     * cada render, la barra de búsqueda desaparecería
+     * apenas el usuario escribiera la primera letra.
+     */
+
     return document.querySelector(
-        "#catalogo"
+        "#catalogo-grid"
     );
 
 };
@@ -1300,29 +1963,14 @@ const crearTarjetaProducto = producto => {
 
     tarjeta.data = producto;
 
-    tarjeta.addEventListener(
-
-        "agregar-carrito",
-
-        ({ detail }) => {
-
-            agregarAlCarrito(detail.id);
-
-        }
-
-    );
-
-    tarjeta.addEventListener(
-
-        "ver-producto",
-
-        ({ detail }) => {
-
-            mostrarDetalleProducto(detail.id);
-
-        }
-
-    );
+    /**
+     * OJO: no se agregan listeners aquí. ProductCard ya
+     * despacha "agregar-carrito" y "ver-producto" con
+     * bubbles+composed, y registrarEventosGlobales() los
+     * escucha una sola vez en document. Agregarlos también
+     * aquí duplicaba cada acción (p. ej. se agregaban 2
+     * unidades al carrito por un solo clic).
+     */
 
     return tarjeta;
 
@@ -1910,10 +2558,18 @@ const actualizarContadorCarrito = () => {
     const contador =
         document.querySelector("#cart-count");
 
-    if (!contador) return;
+    if (contador) {
 
-    contador.textContent =
-        cantidadProductosCarrito();
+        contador.textContent =
+            cantidadProductosCarrito();
+
+    }
+
+    document.dispatchEvent(
+
+        new CustomEvent("carrito-actualizado")
+
+    );
 
 };
 
@@ -1924,7 +2580,13 @@ const actualizarContadorCarrito = () => {
 
 const obtenerContenedorCarrito = () =>
 
-    document.querySelector("#carrito");
+    /**
+     * Igual que con el catálogo: se apunta al contenedor
+     * interno (#carrito-items) para no borrar el encabezado
+     * de la sección en cada actualización del carrito.
+     */
+
+    document.querySelector("#carrito-items");
 
 
 /* ============================================================
@@ -2065,7 +2727,7 @@ const renderCarrito = () => {
 
         <button id="btn-checkout">
 
-            Finalizar compra
+            Continuar con la compra
 
         </button>
 
@@ -2278,7 +2940,21 @@ const registrarBotonCheckout = () => {
 
             () => {
 
-                finalizarCompra();
+                if (carritoVacio()) {
+
+                    Utils.mensaje(
+                        "Tu carrito está vacío."
+                    );
+
+                    return;
+
+                }
+
+                document
+                    .querySelector("#checkout")
+                    ?.scrollIntoView({
+                        behavior: "smooth"
+                    });
 
             }
 
@@ -2389,6 +3065,45 @@ const inicializarProductos = async () => {
 
 
 /* ============================================================
+   CARGA DE CATEGORÍAS
+============================================================ */
+
+/**
+ * Carga las categorías iniciales únicamente
+ * si LocalStorage aún está vacío. Comparte la
+ * misma clave de almacenamiento que el panel admin.
+ */
+const inicializarCategorias = async () => {
+
+    if (AppState.categorias.length) return;
+
+    try {
+
+        const response = await fetch(
+            "./data/categorias.json"
+        );
+
+        if (!response.ok) return;
+
+        const categorias =
+            await response.json();
+
+        AppState.categorias = [...categorias];
+
+        guardarCategorias();
+
+    }
+
+    catch (error) {
+
+        console.error(error);
+
+    }
+
+};
+
+
+/* ============================================================
    CARGA DE VENTAS
 ============================================================ */
 
@@ -2430,6 +3145,8 @@ const inicializarVentas = async () => {
 const recargarDatos = async () => {
 
     cargarEstado();
+
+    await inicializarCategorias();
 
     await inicializarProductos();
 
@@ -2620,10 +3337,42 @@ window.SweetDreamsApp = SweetDreamsApp;
 
 
 /* ============================================================
+   VERSIÓN DE LOS DATOS
+   ------------------------------------------------------------
+   Si el localStorage del navegador tiene datos de un esquema
+   viejo (por ejemplo, de antes de que el catálogo tuviera
+   categoría/descripción/ingredientes), se limpia automáticamente
+   para que se vuelva a sembrar desde los JSON actuales. Evita
+   tener que borrar caché a mano cada vez que cambian los datos.
+============================================================ */
+
+const DATA_VERSION = "3";
+
+const verificarVersionDatos = () => {
+
+    const versionGuardada =
+        localStorage.getItem("dataVersion");
+
+    if (versionGuardada === DATA_VERSION) return;
+
+    Object.values(STORAGE_KEYS).forEach(clave => {
+
+        localStorage.removeItem(clave);
+
+    });
+
+    localStorage.setItem("dataVersion", DATA_VERSION);
+
+};
+
+
+/* ============================================================
    INICIALIZACIÓN PRINCIPAL
 ============================================================ */
 
 const init = async () => {
+
+    verificarVersionDatos();
 
     StorageManager.inicializar();
 

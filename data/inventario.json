@@ -1,562 +1,657 @@
 [
-    {
-      "id": 1,
-      "nombre": "Red Velvet",
-      "precio": 9000,
-      "stock": 233,
-      "disponible": true
-    },
-    {
-      "id": 2,
-      "nombre": "Brownie",
-      "precio": 22000,
-      "stock": 119,
-      "disponible": true
-    },
-    {
-      "id": 3,
-      "nombre": "Flan",
-      "precio": 6000,
-      "stock": 311,
-      "disponible": true
-    },
-    {
-      "id": 4,
-      "nombre": "Cheesecake",
-      "precio": 7000,
-      "stock": 300,
-      "disponible": true
-    },
-    {
-      "id": 5,
-      "nombre": "Brownie",
-      "precio": 12000,
-      "stock": 141,
-      "disponible": true
-    },
-    {
-      "id": 6,
-      "nombre": "Pie Limón",
-      "precio": 6000,
-      "stock": 116,
-      "disponible": true
-    },
-    {
-      "id": 7,
-      "nombre": "Flan",
-      "precio": 6000,
-      "stock": 234,
-      "disponible": true
-    },
-    {
-      "id": 8,
-      "nombre": "Tiramisú",
-      "precio": 6000,
-      "stock": 130,
-      "disponible": true
-    },
-    {
-      "id": 9,
-      "nombre": "Pie Limón",
-      "precio": 9000,
-      "stock": 316,
-      "disponible": true
-    },
-    {
-      "id": 10,
-      "nombre": "Flan",
-      "precio": 14000,
-      "stock": 130,
-      "disponible": true
-    },
-    {
-      "id": 11,
-      "nombre": "Flan",
-      "precio": 23000,
-      "stock": 168,
-      "disponible": true
-    },
-    {
-      "id": 12,
-      "nombre": "Brownie",
-      "precio": 22000,
-      "stock": 129,
-      "disponible": true
-    },
-    {
-      "id": 13,
-      "nombre": "Cheesecake",
-      "precio": 24000,
-      "stock": 193,
-      "disponible": true
-    },
-    {
-      "id": 14,
-      "nombre": "Macaron",
-      "precio": 18000,
-      "stock": 244,
-      "disponible": true
-    },
-    {
-      "id": 15,
-      "nombre": "Flan",
-      "precio": 19000,
-      "stock": 248,
-      "disponible": true
-    },
-    {
-      "id": 16,
-      "nombre": "Tiramisú",
-      "precio": 10000,
-      "stock": 159,
-      "disponible": true
-    },
-    {
-      "id": 17,
-      "nombre": "Flan",
-      "precio": 14000,
-      "stock": 356,
-      "disponible": true
-    },
-    {
-      "id": 18,
-      "nombre": "Red Velvet",
-      "precio": 19000,
-      "stock": 181,
-      "disponible": true
-    },
-    {
-      "id": 19,
-      "nombre": "Brownie",
-      "precio": 21000,
-      "stock": 260,
-      "disponible": true
-    },
-    {
-      "id": 20,
-      "nombre": "Red Velvet",
-      "precio": 9000,
-      "stock": 328,
-      "disponible": true
-    },
-    {
-      "id": 21,
-      "nombre": "Cheesecake",
-      "precio": 7000,
-      "stock": 228,
-      "disponible": true
-    },
-    {
-      "id": 22,
-      "nombre": "Red Velvet",
-      "precio": 24000,
-      "stock": 353,
-      "disponible": true
-    },
-    {
-      "id": 23,
-      "nombre": "Donut",
-      "precio": 7000,
-      "stock": 106,
-      "disponible": true
-    },
-    {
-      "id": 24,
-      "nombre": "Donut",
-      "precio": 7000,
-      "stock": 95,
-      "disponible": true
-    },
-    {
-      "id": 25,
-      "nombre": "Flan",
-      "precio": 19000,
-      "stock": 219,
-      "disponible": true
-    },
-    {
-      "id": 26,
-      "nombre": "Red Velvet",
-      "precio": 5000,
-      "stock": 306,
-      "disponible": true
-    },
-    {
-      "id": 27,
-      "nombre": "Cupcake",
-      "precio": 24000,
-      "stock": 147,
-      "disponible": true
-    },
-    {
-      "id": 28,
-      "nombre": "Cheesecake",
-      "precio": 11000,
-      "stock": 188,
-      "disponible": true
-    },
-    {
-      "id": 29,
-      "nombre": "Tiramisú",
-      "precio": 17000,
-      "stock": 288,
-      "disponible": true
-    },
-    {
-      "id": 30,
-      "nombre": "Brownie",
-      "precio": 10000,
-      "stock": 305,
-      "disponible": true
-    },
-    {
-      "id": 31,
-      "nombre": "Macaron",
-      "precio": 13000,
-      "stock": 150,
-      "disponible": true
-    },
-    {
-      "id": 32,
-      "nombre": "Macaron",
-      "precio": 13000,
-      "stock": 282,
-      "disponible": true
-    },
-    {
-      "id": 33,
-      "nombre": "Pie Limón",
-      "precio": 12000,
-      "stock": 112,
-      "disponible": true
-    },
-    {
-      "id": 34,
-      "nombre": "Cupcake",
-      "precio": 9000,
-      "stock": 172,
-      "disponible": true
-    },
-    {
-      "id": 35,
-      "nombre": "Cheesecake",
-      "precio": 20000,
-      "stock": 151,
-      "disponible": true
-    },
-    {
-      "id": 36,
-      "nombre": "Tres Leches",
-      "precio": 5000,
-      "stock": 152,
-      "disponible": true
-    },
-    {
-      "id": 37,
-      "nombre": "Macaron",
-      "precio": 16000,
-      "stock": 204,
-      "disponible": true
-    },
-    {
-      "id": 38,
-      "nombre": "Macaron",
-      "precio": 24000,
-      "stock": 110,
-      "disponible": true
-    },
-    {
-      "id": 39,
-      "nombre": "Macaron",
-      "precio": 17000,
-      "stock": 279,
-      "disponible": true
-    },
-    {
-      "id": 40,
-      "nombre": "Pie Limón",
-      "precio": 8000,
-      "stock": 322,
-      "disponible": true
-    },
-    {
-      "id": 41,
-      "nombre": "Cheesecake",
-      "precio": 11000,
-      "stock": 85,
-      "disponible": true
-    },
-    {
-      "id": 42,
-      "nombre": "Donut",
-      "precio": 10000,
-      "stock": 124,
-      "disponible": true
-    },
-    {
-      "id": 43,
-      "nombre": "Flan",
-      "precio": 6000,
-      "stock": 77,
-      "disponible": true
-    },
-    {
-      "id": 44,
-      "nombre": "Flan",
-      "precio": 9000,
-      "stock": 311,
-      "disponible": true
-    },
-    {
-      "id": 45,
-      "nombre": "Red Velvet",
-      "precio": 24000,
-      "stock": 47,
-      "disponible": true
-    },
-    {
-      "id": 46,
-      "nombre": "Tiramisú",
-      "precio": 24000,
-      "stock": 236,
-      "disponible": true
-    },
-    {
-      "id": 47,
-      "nombre": "Tres Leches",
-      "precio": 16000,
-      "stock": 271,
-      "disponible": true
-    },
-    {
-      "id": 48,
-      "nombre": "Brownie",
-      "precio": 8000,
-      "stock": 333,
-      "disponible": true
-    },
-    {
-      "id": 49,
-      "nombre": "Donut",
-      "precio": 20000,
-      "stock": 194,
-      "disponible": true
-    },
-    {
-      "id": 50,
-      "nombre": "Cupcake",
-      "precio": 8000,
-      "stock": 233,
-      "disponible": true
-    },
-    {
-      "id": 51,
-      "nombre": "Donut",
-      "precio": 10000,
-      "stock": 291,
-      "disponible": true
-    },
-    {
-      "id": 52,
-      "nombre": "Tiramisú",
-      "precio": 21000,
-      "stock": 228,
-      "disponible": true
-    },
-    {
-      "id": 53,
-      "nombre": "Macaron",
-      "precio": 5000,
-      "stock": 333,
-      "disponible": true
-    },
-    {
-      "id": 54,
-      "nombre": "Brownie",
-      "precio": 13000,
-      "stock": 336,
-      "disponible": true
-    },
-    {
-      "id": 55,
-      "nombre": "Cupcake",
-      "precio": 16000,
-      "stock": 207,
-      "disponible": true
-    },
-    {
-      "id": 56,
-      "nombre": "Macaron",
-      "precio": 21000,
-      "stock": 221,
-      "disponible": true
-    },
-    {
-      "id": 57,
-      "nombre": "Flan",
-      "precio": 11000,
-      "stock": 198,
-      "disponible": true
-    },
-    {
-      "id": 58,
-      "nombre": "Tiramisú",
-      "precio": 11000,
-      "stock": 353,
-      "disponible": true
-    },
-    {
-      "id": 59,
-      "nombre": "Red Velvet",
-      "precio": 5000,
-      "stock": 74,
-      "disponible": true
-    },
-    {
-      "id": 60,
-      "nombre": "Donut",
-      "precio": 13000,
-      "stock": 168,
-      "disponible": true
-    },
-    {
-      "id": 61,
-      "nombre": "Donut",
-      "precio": 16000,
-      "stock": 221,
-      "disponible": true
-    },
-    {
-      "id": 62,
-      "nombre": "Tiramisú",
-      "precio": 8000,
-      "stock": 201,
-      "disponible": true
-    },
-    {
-      "id": 63,
-      "nombre": "Tiramisú",
-      "precio": 15000,
-      "stock": 190,
-      "disponible": true
-    },
-    {
-      "id": 64,
-      "nombre": "Flan",
-      "precio": 24000,
-      "stock": 86,
-      "disponible": true
-    },
-    {
-      "id": 65,
-      "nombre": "Red Velvet",
-      "precio": 25000,
-      "stock": 83,
-      "disponible": true
-    },
-    {
-      "id": 66,
-      "nombre": "Pie Limón",
-      "precio": 11000,
-      "stock": 291,
-      "disponible": true
-    },
-    {
-      "id": 67,
-      "nombre": "Pie Limón",
-      "precio": 25000,
-      "stock": 206,
-      "disponible": true
-    },
-    {
-      "id": 68,
-      "nombre": "Pie Limón",
-      "precio": 19000,
-      "stock": 240,
-      "disponible": true
-    },
-    {
-      "id": 69,
-      "nombre": "Cupcake",
-      "precio": 10000,
-      "stock": 93,
-      "disponible": true
-    },
-    {
-      "id": 70,
-      "nombre": "Cupcake",
-      "precio": 23000,
-      "stock": 281,
-      "disponible": true
-    },
-    {
-      "id": 71,
-      "nombre": "Flan",
-      "precio": 24000,
-      "stock": 311,
-      "disponible": true
-    },
-    {
-      "id": 72,
-      "nombre": "Cupcake",
-      "precio": 22000,
-      "stock": 321,
-      "disponible": true
-    },
-    {
-      "id": 73,
-      "nombre": "Cheesecake",
-      "precio": 5000,
-      "stock": 144,
-      "disponible": true
-    },
-    {
-      "id": 74,
-      "nombre": "Cupcake",
-      "precio": 18000,
-      "stock": 151,
-      "disponible": true
-    },
-    {
-      "id": 75,
-      "nombre": "Cheesecake",
-      "precio": 13000,
-      "stock": 170,
-      "disponible": true
-    },
-    {
-      "id": 76,
-      "nombre": "Macaron",
-      "precio": 12000,
-      "stock": 224,
-      "disponible": true
-    },
-    {
-      "id": 77,
-      "nombre": "Macaron",
-      "precio": 18000,
-      "stock": 99,
-      "disponible": true
-    },
-    {
-      "id": 78,
-      "nombre": "Red Velvet",
-      "precio": 19000,
-      "stock": 342,
-      "disponible": true
-    },
-    {
-      "id": 79,
-      "nombre": "Macaron",
-      "precio": 9000,
-      "stock": 316,
-      "disponible": true
-    },
-    {
-      "id": 80,
-      "nombre": "Macaron",
-      "precio": 21000,
-      "stock": 90,
-      "disponible": true
-    }
- ]
+  {
+    "id": "1",
+    "nombre": "Torta Red Velvet",
+    "categoria": "Tortas",
+    "precio": 68000,
+    "descripcion": "Capas de terciopelo rojo con frosting de queso crema, suave y ligeramente ácida.",
+    "ingredientes": [
+      "Harina",
+      "Cacao",
+      "Buttermilk",
+      "Queso crema",
+      "Vainilla"
+    ],
+    "imagen": "https://placehold.co/600x600/1d4c8b/ffffff?text=Torta+Red+Velvet",
+    "stock": 18,
+    "estado": "Disponible",
+    "tamaño": "Torta completa (8 porciones)",
+    "calificacion": 4.5
+  },
+  {
+    "id": "2",
+    "nombre": "Torta Tres Leches",
+    "categoria": "Tortas",
+    "precio": 62000,
+    "descripcion": "Bizcocho esponjoso bañado en tres leches, coronado con crema chantillí y canela.",
+    "ingredientes": [
+      "Leche evaporada",
+      "Leche condensada",
+      "Crema de leche",
+      "Huevo",
+      "Canela"
+    ],
+    "imagen": "https://placehold.co/600x600/1d4c8b/ffffff?text=Torta+Tres+Leches",
+    "stock": 15,
+    "estado": "Disponible",
+    "tamaño": "Torta completa (8 porciones)",
+    "calificacion": 4.6
+  },
+  {
+    "id": "3",
+    "nombre": "Cheesecake de Fresa",
+    "categoria": "Tortas",
+    "precio": 72000,
+    "descripcion": "Cheesecake horneado lentamente sobre base de galleta, cubierto con salsa de fresa natural.",
+    "ingredientes": [
+      "Queso crema",
+      "Galleta",
+      "Fresa",
+      "Huevo",
+      "Azúcar"
+    ],
+    "imagen": "https://placehold.co/600x600/1d4c8b/ffffff?text=Cheesecake+de+Fresa",
+    "stock": 12,
+    "estado": "Disponible",
+    "tamaño": "Torta completa (8 porciones)",
+    "calificacion": 4.9
+  },
+  {
+    "id": "4",
+    "nombre": "Torta de Chocolate",
+    "categoria": "Tortas",
+    "precio": 65000,
+    "descripcion": "Bizcocho húmedo de chocolate oscuro con ganache brillante y un toque de café.",
+    "ingredientes": [
+      "Chocolate oscuro",
+      "Cacao",
+      "Mantequilla",
+      "Huevo",
+      "Café"
+    ],
+    "imagen": "https://placehold.co/600x600/1d4c8b/ffffff?text=Torta+de+Chocolate",
+    "stock": 20,
+    "estado": "Disponible",
+    "tamaño": "Torta completa (8 porciones)",
+    "calificacion": 4.5
+  },
+  {
+    "id": "5",
+    "nombre": "Torta de Zanahoria",
+    "categoria": "Tortas",
+    "precio": 58000,
+    "descripcion": "Bizcocho especiado de zanahoria y nuez, con frosting de queso crema y limón.",
+    "ingredientes": [
+      "Zanahoria",
+      "Nuez",
+      "Canela",
+      "Queso crema",
+      "Limón"
+    ],
+    "imagen": "https://placehold.co/600x600/1d4c8b/ffffff?text=Torta+de+Zanahoria",
+    "stock": 14,
+    "estado": "Disponible",
+    "tamaño": "Torta completa (8 porciones)",
+    "calificacion": 4.5
+  },
+  {
+    "id": "6",
+    "nombre": "Torta Milhojas",
+    "categoria": "Tortas",
+    "precio": 75000,
+    "descripcion": "Capas crocantes de hojaldre con manjar blanco y merengue tostado por encima.",
+    "ingredientes": [
+      "Hojaldre",
+      "Manjar blanco",
+      "Merengue",
+      "Mantequilla",
+      "Vainilla"
+    ],
+    "imagen": "https://placehold.co/600x600/1d4c8b/ffffff?text=Torta+Milhojas",
+    "stock": 9,
+    "estado": "Disponible",
+    "tamaño": "Torta completa (8 porciones)",
+    "calificacion": 4.6
+  },
+  {
+    "id": "7",
+    "nombre": "Cupcake Vainilla",
+    "categoria": "Cupcakes",
+    "precio": 6500,
+    "descripcion": "Cupcake clásico de vainilla con frosting de mantequilla suave.",
+    "ingredientes": [
+      "Harina",
+      "Mantequilla",
+      "Huevo",
+      "Vainilla",
+      "Azúcar"
+    ],
+    "imagen": "https://placehold.co/600x600/1d4c8b/ffffff?text=Cupcake+Vainilla",
+    "stock": 60,
+    "estado": "Disponible",
+    "tamaño": "Unidad",
+    "calificacion": 4.2
+  },
+  {
+    "id": "8",
+    "nombre": "Cupcake Red Velvet",
+    "categoria": "Cupcakes",
+    "precio": 7500,
+    "descripcion": "Versión individual de la clásica torta, con frosting de queso crema.",
+    "ingredientes": [
+      "Harina",
+      "Cacao",
+      "Buttermilk",
+      "Queso crema"
+    ],
+    "imagen": "https://placehold.co/600x600/1d4c8b/ffffff?text=Cupcake+Red+Velvet",
+    "stock": 48,
+    "estado": "Disponible",
+    "tamaño": "Unidad",
+    "calificacion": 4.5
+  },
+  {
+    "id": "9",
+    "nombre": "Cupcake Chocolate",
+    "categoria": "Cupcakes",
+    "precio": 7000,
+    "descripcion": "Bizcocho de chocolate intenso relleno de ganache y topping de chocolate.",
+    "ingredientes": [
+      "Chocolate oscuro",
+      "Cacao",
+      "Mantequilla",
+      "Huevo"
+    ],
+    "imagen": "https://placehold.co/600x600/1d4c8b/ffffff?text=Cupcake+Chocolate",
+    "stock": 55,
+    "estado": "Disponible",
+    "tamaño": "Unidad",
+    "calificacion": 4.6
+  },
+  {
+    "id": "10",
+    "nombre": "Cupcake Limón",
+    "categoria": "Cupcakes",
+    "precio": 7000,
+    "descripcion": "Cupcake cítrico relleno de curd de limón, con frosting suave.",
+    "ingredientes": [
+      "Limón",
+      "Harina",
+      "Mantequilla",
+      "Huevo"
+    ],
+    "imagen": "https://placehold.co/600x600/1d4c8b/ffffff?text=Cupcake+Limón",
+    "stock": 40,
+    "estado": "Disponible",
+    "tamaño": "Unidad",
+    "calificacion": 4.8
+  },
+  {
+    "id": "11",
+    "nombre": "Cupcake Oreo",
+    "categoria": "Cupcakes",
+    "precio": 8000,
+    "descripcion": "Cupcake de vainilla con trozos de galleta Oreo y frosting cremoso.",
+    "ingredientes": [
+      "Galleta de chocolate",
+      "Harina",
+      "Mantequilla",
+      "Huevo"
+    ],
+    "imagen": "https://placehold.co/600x600/1d4c8b/ffffff?text=Cupcake+Oreo",
+    "stock": 45,
+    "estado": "Disponible",
+    "tamaño": "Unidad",
+    "calificacion": 4.1
+  },
+  {
+    "id": "12",
+    "nombre": "Cupcake Coco",
+    "categoria": "Cupcakes",
+    "precio": 7500,
+    "descripcion": "Cupcake húmedo de coco rallado con frosting ligero de coco tostado.",
+    "ingredientes": [
+      "Coco rallado",
+      "Harina",
+      "Mantequilla",
+      "Huevo"
+    ],
+    "imagen": "https://placehold.co/600x600/1d4c8b/ffffff?text=Cupcake+Coco",
+    "stock": 30,
+    "estado": "Disponible",
+    "tamaño": "Unidad",
+    "calificacion": 4.3
+  },
+  {
+    "id": "13",
+    "nombre": "Brownie Clásico",
+    "categoria": "Brownies",
+    "precio": 8500,
+    "descripcion": "Brownie denso y húmedo de chocolate oscuro, con el clásico centro fundente.",
+    "ingredientes": [
+      "Chocolate oscuro",
+      "Mantequilla",
+      "Huevo",
+      "Azúcar"
+    ],
+    "imagen": "https://placehold.co/600x600/1d4c8b/ffffff?text=Brownie+Clásico",
+    "stock": 50,
+    "estado": "Disponible",
+    "tamaño": "Unidad",
+    "calificacion": 4.1
+  },
+  {
+    "id": "14",
+    "nombre": "Brownie con Nuez",
+    "categoria": "Brownies",
+    "precio": 9500,
+    "descripcion": "El clásico brownie con trozos de nuez tostada para un toque crocante.",
+    "ingredientes": [
+      "Chocolate oscuro",
+      "Nuez",
+      "Mantequilla",
+      "Huevo"
+    ],
+    "imagen": "https://placehold.co/600x600/1d4c8b/ffffff?text=Brownie+con+Nuez",
+    "stock": 0,
+    "estado": "Agotado",
+    "tamaño": "Unidad",
+    "calificacion": 4.8
+  },
+  {
+    "id": "15",
+    "nombre": "Brownie Oreo",
+    "categoria": "Brownies",
+    "precio": 10000,
+    "descripcion": "Brownie de chocolate con galleta Oreo horneada dentro y por encima.",
+    "ingredientes": [
+      "Chocolate oscuro",
+      "Galleta de chocolate",
+      "Mantequilla",
+      "Huevo"
+    ],
+    "imagen": "https://placehold.co/600x600/1d4c8b/ffffff?text=Brownie+Oreo",
+    "stock": 42,
+    "estado": "Disponible",
+    "tamaño": "Unidad",
+    "calificacion": 4.7
+  },
+  {
+    "id": "16",
+    "nombre": "Brownie Doble Chocolate",
+    "categoria": "Brownies",
+    "precio": 10500,
+    "descripcion": "Brownie con chispas de chocolate blanco y negro para los amantes del cacao.",
+    "ingredientes": [
+      "Chocolate oscuro",
+      "Chocolate blanco",
+      "Mantequilla",
+      "Huevo"
+    ],
+    "imagen": "https://placehold.co/600x600/1d4c8b/ffffff?text=Brownie+Doble+Chocolate",
+    "stock": 33,
+    "estado": "Disponible",
+    "tamaño": "Unidad",
+    "calificacion": 4.0
+  },
+  {
+    "id": "17",
+    "nombre": "Blondie",
+    "categoria": "Brownies",
+    "precio": 9000,
+    "descripcion": "El primo rubio del brownie: base de mantequilla morena, vainilla y nuez.",
+    "ingredientes": [
+      "Mantequilla morena",
+      "Vainilla",
+      "Nuez",
+      "Harina"
+    ],
+    "imagen": "https://placehold.co/600x600/1d4c8b/ffffff?text=Blondie",
+    "stock": 28,
+    "estado": "Disponible",
+    "tamaño": "Unidad",
+    "calificacion": 5.0
+  },
+  {
+    "id": "18",
+    "nombre": "Brownie Nutella",
+    "categoria": "Brownies",
+    "precio": 11000,
+    "descripcion": "Brownie relleno con un corazón fundente de Nutella.",
+    "ingredientes": [
+      "Chocolate oscuro",
+      "Avellana",
+      "Mantequilla",
+      "Huevo"
+    ],
+    "imagen": "https://placehold.co/600x600/1d4c8b/ffffff?text=Brownie+Nutella",
+    "stock": 25,
+    "estado": "Disponible",
+    "tamaño": "Unidad",
+    "calificacion": 5.0
+  },
+  {
+    "id": "19",
+    "nombre": "Dona Glaseada",
+    "categoria": "Donas",
+    "precio": 5500,
+    "descripcion": "Dona esponjosa clásica bañada en glaseado dulce.",
+    "ingredientes": [
+      "Harina",
+      "Levadura",
+      "Huevo",
+      "Glaseado"
+    ],
+    "imagen": "https://placehold.co/600x600/1d4c8b/ffffff?text=Dona+Glaseada",
+    "stock": 70,
+    "estado": "Disponible",
+    "tamaño": "Unidad",
+    "calificacion": 4.7
+  },
+  {
+    "id": "20",
+    "nombre": "Dona de Chocolate",
+    "categoria": "Donas",
+    "precio": 6000,
+    "descripcion": "Dona frita al punto justo, cubierta con baño de chocolate.",
+    "ingredientes": [
+      "Harina",
+      "Levadura",
+      "Chocolate",
+      "Huevo"
+    ],
+    "imagen": "https://placehold.co/600x600/1d4c8b/ffffff?text=Dona+de+Chocolate",
+    "stock": 65,
+    "estado": "Disponible",
+    "tamaño": "Unidad",
+    "calificacion": 4.6
+  },
+  {
+    "id": "21",
+    "nombre": "Dona Rellena de Arequipe",
+    "categoria": "Donas",
+    "precio": 7000,
+    "descripcion": "Dona esponjosa rellena de arequipe casero.",
+    "ingredientes": [
+      "Harina",
+      "Levadura",
+      "Arequipe",
+      "Huevo"
+    ],
+    "imagen": "https://placehold.co/600x600/1d4c8b/ffffff?text=Dona+Rellena+de+Arequipe",
+    "stock": 40,
+    "estado": "Disponible",
+    "tamaño": "Unidad",
+    "calificacion": 4.2
+  },
+  {
+    "id": "22",
+    "nombre": "Dona de Canela",
+    "categoria": "Donas",
+    "precio": 5500,
+    "descripcion": "Dona clásica bañada en azúcar y canela recién molida.",
+    "ingredientes": [
+      "Harina",
+      "Levadura",
+      "Canela",
+      "Azúcar"
+    ],
+    "imagen": "https://placehold.co/600x600/1d4c8b/ffffff?text=Dona+de+Canela",
+    "stock": 50,
+    "estado": "Disponible",
+    "tamaño": "Unidad",
+    "calificacion": 4.0
+  },
+  {
+    "id": "23",
+    "nombre": "Dona Red Velvet",
+    "categoria": "Donas",
+    "precio": 7500,
+    "descripcion": "Dona de terciopelo rojo con glaseado de queso crema.",
+    "ingredientes": [
+      "Harina",
+      "Cacao",
+      "Queso crema",
+      "Colorante natural"
+    ],
+    "imagen": "https://placehold.co/600x600/1d4c8b/ffffff?text=Dona+Red+Velvet",
+    "stock": 30,
+    "estado": "Disponible",
+    "tamaño": "Unidad",
+    "calificacion": 4.5
+  },
+  {
+    "id": "24",
+    "nombre": "Dona de Maple",
+    "categoria": "Donas",
+    "precio": 6500,
+    "descripcion": "Dona glaseada con jarabe de maple y un toque de sal marina.",
+    "ingredientes": [
+      "Harina",
+      "Levadura",
+      "Jarabe de maple",
+      "Sal marina"
+    ],
+    "imagen": "https://placehold.co/600x600/1d4c8b/ffffff?text=Dona+de+Maple",
+    "stock": 35,
+    "estado": "Disponible",
+    "tamaño": "Unidad",
+    "calificacion": 4.1
+  },
+  {
+    "id": "25",
+    "nombre": "Macaron Frambuesa",
+    "categoria": "Galletas",
+    "precio": 4500,
+    "descripcion": "Macaron francés crocante por fuera, suave por dentro, relleno de ganache de frambuesa.",
+    "ingredientes": [
+      "Almendra",
+      "Clara de huevo",
+      "Azúcar",
+      "Frambuesa"
+    ],
+    "imagen": "https://placehold.co/600x600/1d4c8b/ffffff?text=Macaron+Frambuesa",
+    "stock": 80,
+    "estado": "Disponible",
+    "tamaño": "Unidad",
+    "calificacion": 4.2
+  },
+  {
+    "id": "26",
+    "nombre": "Macaron Pistacho",
+    "categoria": "Galletas",
+    "precio": 4800,
+    "descripcion": "Macaron de pistacho con relleno cremoso y un toque tostado.",
+    "ingredientes": [
+      "Almendra",
+      "Pistacho",
+      "Clara de huevo",
+      "Azúcar"
+    ],
+    "imagen": "https://placehold.co/600x600/1d4c8b/ffffff?text=Macaron+Pistacho",
+    "stock": 70,
+    "estado": "Disponible",
+    "tamaño": "Unidad",
+    "calificacion": 4.2
+  },
+  {
+    "id": "27",
+    "nombre": "Galleta Chispas de Chocolate",
+    "categoria": "Galletas",
+    "precio": 4000,
+    "descripcion": "La clásica galleta crocante por fuera y suave por dentro, cargada de chispas de chocolate.",
+    "ingredientes": [
+      "Harina",
+      "Mantequilla",
+      "Chispas de chocolate",
+      "Huevo"
+    ],
+    "imagen": "https://placehold.co/600x600/1d4c8b/ffffff?text=Galleta+Chispas+de+Chocolate",
+    "stock": 90,
+    "estado": "Disponible",
+    "tamaño": "Unidad",
+    "calificacion": 4.0
+  },
+  {
+    "id": "28",
+    "nombre": "Galleta de Avena",
+    "categoria": "Galletas",
+    "precio": 3800,
+    "descripcion": "Galleta rústica de avena con pasas y un toque de canela.",
+    "ingredientes": [
+      "Avena",
+      "Pasas",
+      "Canela",
+      "Mantequilla"
+    ],
+    "imagen": "https://placehold.co/600x600/1d4c8b/ffffff?text=Galleta+de+Avena",
+    "stock": 0,
+    "estado": "Agotado",
+    "tamaño": "Unidad",
+    "calificacion": 4.5
+  },
+  {
+    "id": "29",
+    "nombre": "Alfajor",
+    "categoria": "Galletas",
+    "precio": 5000,
+    "descripcion": "Dos galletas suaves rellenas de arequipe y cubiertas con coco rallado.",
+    "ingredientes": [
+      "Harina",
+      "Arequipe",
+      "Coco rallado",
+      "Maicena"
+    ],
+    "imagen": "https://placehold.co/600x600/1d4c8b/ffffff?text=Alfajor",
+    "stock": 60,
+    "estado": "Disponible",
+    "tamaño": "Unidad",
+    "calificacion": 4.4
+  },
+  {
+    "id": "30",
+    "nombre": "Galleta Red Velvet",
+    "categoria": "Galletas",
+    "precio": 4500,
+    "descripcion": "Galleta suave de terciopelo rojo con chips de chocolate blanco.",
+    "ingredientes": [
+      "Harina",
+      "Cacao",
+      "Chocolate blanco",
+      "Buttermilk"
+    ],
+    "imagen": "https://placehold.co/600x600/1d4c8b/ffffff?text=Galleta+Red+Velvet",
+    "stock": 45,
+    "estado": "Disponible",
+    "tamaño": "Unidad",
+    "calificacion": 4.8
+  },
+  {
+    "id": "31",
+    "nombre": "Tiramisú",
+    "categoria": "Postres Fríos",
+    "precio": 14000,
+    "descripcion": "Clásico postre italiano de capas de café, mascarpone y cacao.",
+    "ingredientes": [
+      "Café",
+      "Mascarpone",
+      "Bizcochos",
+      "Cacao"
+    ],
+    "imagen": "https://placehold.co/600x600/1d4c8b/ffffff?text=Tiramisú",
+    "stock": 25,
+    "estado": "Disponible",
+    "tamaño": "Porción individual",
+    "calificacion": 4.5
+  },
+  {
+    "id": "32",
+    "nombre": "Flan de Caramelo",
+    "categoria": "Postres Fríos",
+    "precio": 9000,
+    "descripcion": "Flan casero de textura sedosa bañado en caramelo dorado.",
+    "ingredientes": [
+      "Leche",
+      "Huevo",
+      "Azúcar",
+      "Vainilla"
+    ],
+    "imagen": "https://placehold.co/600x600/1d4c8b/ffffff?text=Flan+de+Caramelo",
+    "stock": 30,
+    "estado": "Disponible",
+    "tamaño": "Porción individual",
+    "calificacion": 4.6
+  },
+  {
+    "id": "33",
+    "nombre": "Pie de Limón",
+    "categoria": "Postres Fríos",
+    "precio": 11000,
+    "descripcion": "Tarta de limón con base crocante, relleno cítrico y merengue tostado.",
+    "ingredientes": [
+      "Limón",
+      "Merengue",
+      "Masa quebrada",
+      "Leche condensada"
+    ],
+    "imagen": "https://placehold.co/600x600/1d4c8b/ffffff?text=Pie+de+Limón",
+    "stock": 22,
+    "estado": "Disponible",
+    "tamaño": "Porción individual",
+    "calificacion": 4.5
+  },
+  {
+    "id": "34",
+    "nombre": "Panna Cotta",
+    "categoria": "Postres Fríos",
+    "precio": 12000,
+    "descripcion": "Postre italiano de crema suave con coulis de frutos rojos.",
+    "ingredientes": [
+      "Crema de leche",
+      "Vainilla",
+      "Gelatina",
+      "Frutos rojos"
+    ],
+    "imagen": "https://placehold.co/600x600/1d4c8b/ffffff?text=Panna+Cotta",
+    "stock": 20,
+    "estado": "Disponible",
+    "tamaño": "Porción individual",
+    "calificacion": 4.7
+  },
+  {
+    "id": "35",
+    "nombre": "Mousse de Chocolate",
+    "categoria": "Postres Fríos",
+    "precio": 13000,
+    "descripcion": "Mousse aireado de chocolate oscuro, ligero y profundo en sabor.",
+    "ingredientes": [
+      "Chocolate oscuro",
+      "Crema de leche",
+      "Huevo",
+      "Azúcar"
+    ],
+    "imagen": "https://placehold.co/600x600/1d4c8b/ffffff?text=Mousse+de+Chocolate",
+    "stock": 18,
+    "estado": "Disponible",
+    "tamaño": "Porción individual",
+    "calificacion": 4.5
+  },
+  {
+    "id": "36",
+    "nombre": "Cheesecake de Maracuyá",
+    "categoria": "Postres Fríos",
+    "precio": 13500,
+    "descripcion": "Cheesecake cremoso con capa de maracuyá fresco, dulce y ácido a la vez.",
+    "ingredientes": [
+      "Queso crema",
+      "Maracuyá",
+      "Galleta",
+      "Huevo"
+    ],
+    "imagen": "https://placehold.co/600x600/1d4c8b/ffffff?text=Cheesecake+de+Maracuyá",
+    "stock": 16,
+    "estado": "Disponible",
+    "tamaño": "Porción individual",
+    "calificacion": 4.3
+  }
+]

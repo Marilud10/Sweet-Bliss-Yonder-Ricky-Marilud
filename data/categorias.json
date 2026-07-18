@@ -1,0 +1,38 @@
+[
+  {
+    "id": "CAT001",
+    "nombre": "Brownies",
+    "descripcion": "",
+    "fechaCreacion": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "CAT002",
+    "nombre": "Cupcakes",
+    "descripcion": "",
+    "fechaCreacion": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "CAT003",
+    "nombre": "Donas",
+    "descripcion": "",
+    "fechaCreacion": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "CAT004",
+    "nombre": "Galletas",
+    "descripcion": "",
+    "fechaCreacion": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "CAT005",
+    "nombre": "Postres Fríos",
+    "descripcion": "",
+    "fechaCreacion": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "CAT006",
+    "nombre": "Tortas",
+    "descripcion": "",
+    "fechaCreacion": "2026-01-01T00:00:00.000Z"
+  }
+]

@@ -1,602 +1,1991 @@
 [
-    {
-      "id": 1,
-      "nombre": "Red Velvet",
-      "precio": 9000,
-      "cantidad_venta_mensual": 222
-    },
-    {
-      "id": 2,
-      "nombre": "Brownie",
-      "precio": 22000,
-      "cantidad_venta_mensual": 68
-    },
-    {
-      "id": 3,
-      "nombre": "Flan",
-      "precio": 6000,
-      "cantidad_venta_mensual": 279
-    },
-    {
-      "id": 4,
-      "nombre": "Cheesecake",
-      "precio": 7000,
-      "cantidad_venta_mensual": 242
-    },
-    {
-      "id": 5,
-      "nombre": "Brownie",
-      "precio": 12000,
-      "cantidad_venta_mensual": 66
-    },
-    {
-      "id": 6,
-      "nombre": "Pie Limón",
-      "precio": 6000,
-      "cantidad_venta_mensual": 83
-    },
-    {
-      "id": 7,
-      "nombre": "Flan",
-      "precio": 6000,
-      "cantidad_venta_mensual": 223
-    },
-    {
-      "id": 8,
-      "nombre": "Tiramisú",
-      "precio": 6000,
-      "cantidad_venta_mensual": 88
-    },
-    {
-      "id": 9,
-      "nombre": "Pie Limón",
-      "precio": 9000,
-      "cantidad_venta_mensual": 296
-    },
-    {
-      "id": 10,
-      "nombre": "Flan",
-      "precio": 14000,
-      "cantidad_venta_mensual": 112
-    },
-    {
-      "id": 11,
-      "nombre": "Flan",
-      "precio": 23000,
-      "cantidad_venta_mensual": 116
-    },
-    {
-      "id": 12,
-      "nombre": "Brownie",
-      "precio": 22000,
-      "cantidad_venta_mensual": 52
-    },
-    {
-      "id": 13,
-      "nombre": "Cheesecake",
-      "precio": 24000,
-      "cantidad_venta_mensual": 125
-    },
-    {
-      "id": 14,
-      "nombre": "Macaron",
-      "precio": 18000,
-      "cantidad_venta_mensual": 180
-    },
-    {
-      "id": 15,
-      "nombre": "Flan",
-      "precio": 19000,
-      "cantidad_venta_mensual": 205
-    },
-    {
-      "id": 16,
-      "nombre": "Tiramisú",
-      "precio": 10000,
-      "cantidad_venta_mensual": 144
-    },
-    {
-      "id": 17,
-      "nombre": "Flan",
-      "precio": 14000,
-      "cantidad_venta_mensual": 288
-    },
-    {
-      "id": 18,
-      "nombre": "Red Velvet",
-      "precio": 19000,
-      "cantidad_venta_mensual": 167
-    },
-    {
-      "id": 19,
-      "nombre": "Brownie",
-      "precio": 21000,
-      "cantidad_venta_mensual": 234
-    },
-    {
-      "id": 20,
-      "nombre": "Red Velvet",
-      "precio": 9000,
-      "cantidad_venta_mensual": 270
-    },
-    {
-      "id": 21,
-      "nombre": "Cheesecake",
-      "precio": 7000,
-      "cantidad_venta_mensual": 180
-    },
-    {
-      "id": 22,
-      "nombre": "Red Velvet",
-      "precio": 24000,
-      "cantidad_venta_mensual": 274
-    },
-    {
-      "id": 23,
-      "nombre": "Donut",
-      "precio": 7000,
-      "cantidad_venta_mensual": 67
-    },
-    {
-      "id": 24,
-      "nombre": "Donut",
-      "precio": 7000,
-      "cantidad_venta_mensual": 51
-    },
-    {
-      "id": 25,
-      "nombre": "Flan",
-      "precio": 19000,
-      "cantidad_venta_mensual": 165
-    },
-    {
-      "id": 26,
-      "nombre": "Red Velvet",
-      "precio": 5000,
-      "cantidad_venta_mensual": 256
-    },
-    {
-      "id": 27,
-      "nombre": "Cupcake",
-      "precio": 24000,
-      "cantidad_venta_mensual": 79
-    },
-    {
-      "id": 28,
-      "nombre": "Cheesecake",
-      "precio": 11000,
-      "cantidad_venta_mensual": 167
-    },
-    {
-      "id": 29,
-      "nombre": "Tiramisú",
-      "precio": 17000,
-      "cantidad_venta_mensual": 220
-    },
-    {
-      "id": 30,
-      "nombre": "Brownie",
-      "precio": 10000,
-      "cantidad_venta_mensual": 249
-    },
-    {
-      "id": 31,
-      "nombre": "Macaron",
-      "precio": 13000,
-      "cantidad_venta_mensual": 90
-    },
-    {
-      "id": 32,
-      "nombre": "Macaron",
-      "precio": 13000,
-      "cantidad_venta_mensual": 232
-    },
-    {
-      "id": 33,
-      "nombre": "Pie Limón",
-      "precio": 12000,
-      "cantidad_venta_mensual": 97
-    },
-    {
-      "id": 34,
-      "nombre": "Cupcake",
-      "precio": 9000,
-      "cantidad_venta_mensual": 138
-    },
-    {
-      "id": 35,
-      "nombre": "Cheesecake",
-      "precio": 20000,
-      "cantidad_venta_mensual": 113
-    },
-    {
-      "id": 36,
-      "nombre": "Tres Leches",
-      "precio": 5000,
-      "cantidad_venta_mensual": 94
-    },
-    {
-      "id": 37,
-      "nombre": "Macaron",
-      "precio": 16000,
-      "cantidad_venta_mensual": 183
-    },
-    {
-      "id": 38,
-      "nombre": "Macaron",
-      "precio": 24000,
-      "cantidad_venta_mensual": 47
-    },
-    {
-      "id": 39,
-      "nombre": "Macaron",
-      "precio": 17000,
-      "cantidad_venta_mensual": 223
-    },
-    {
-      "id": 40,
-      "nombre": "Pie Limón",
-      "precio": 8000,
-      "cantidad_venta_mensual": 266
-    },
-    {
-      "id": 41,
-      "nombre": "Cheesecake",
-      "precio": 11000,
-      "cantidad_venta_mensual": 54
-    },
-    {
-      "id": 42,
-      "nombre": "Donut",
-      "precio": 10000,
-      "cantidad_venta_mensual": 76
-    },
-    {
-      "id": 43,
-      "nombre": "Flan",
-      "precio": 6000,
-      "cantidad_venta_mensual": 72
-    },
-    {
-      "id": 44,
-      "nombre": "Flan",
-      "precio": 9000,
-      "cantidad_venta_mensual": 294
-    },
-    {
-      "id": 45,
-      "nombre": "Red Velvet",
-      "precio": 24000,
-      "cantidad_venta_mensual": 33
-    },
-    {
-      "id": 46,
-      "nombre": "Tiramisú",
-      "precio": 24000,
-      "cantidad_venta_mensual": 212
-    },
-    {
-      "id": 47,
-      "nombre": "Tres Leches",
-      "precio": 16000,
-      "cantidad_venta_mensual": 206
-    },
-    {
-      "id": 48,
-      "nombre": "Brownie",
-      "precio": 8000,
-      "cantidad_venta_mensual": 269
-    },
-    {
-      "id": 49,
-      "nombre": "Donut",
-      "precio": 20000,
-      "cantidad_venta_mensual": 179
-    },
-    {
-      "id": 50,
-      "nombre": "Cupcake",
-      "precio": 8000,
-      "cantidad_venta_mensual": 195
-    },
-    {
-      "id": 51,
-      "nombre": "Donut",
-      "precio": 10000,
-      "cantidad_venta_mensual": 284
-    },
-    {
-      "id": 52,
-      "nombre": "Tiramisú",
-      "precio": 21000,
-      "cantidad_venta_mensual": 205
-    },
-    {
-      "id": 53,
-      "nombre": "Macaron",
-      "precio": 5000,
-      "cantidad_venta_mensual": 290
-    },
-    {
-      "id": 54,
-      "nombre": "Brownie",
-      "precio": 13000,
-      "cantidad_venta_mensual": 285
-    },
-    {
-      "id": 55,
-      "nombre": "Cupcake",
-      "precio": 16000,
-      "cantidad_venta_mensual": 134
-    },
-    {
-      "id": 56,
-      "nombre": "Macaron",
-      "precio": 21000,
-      "cantidad_venta_mensual": 188
-    },
-    {
-      "id": 57,
-      "nombre": "Flan",
-      "precio": 11000,
-      "cantidad_venta_mensual": 142
-    },
-    {
-      "id": 58,
-      "nombre": "Tiramisú",
-      "precio": 11000,
-      "cantidad_venta_mensual": 285
-    },
-    {
-      "id": 59,
-      "nombre": "Red Velvet",
-      "precio": 5000,
-      "cantidad_venta_mensual": 34
-    },
-    {
-      "id": 60,
-      "nombre": "Donut",
-      "precio": 13000,
-      "cantidad_venta_mensual": 119
-    },
-    {
-      "id": 61,
-      "nombre": "Donut",
-      "precio": 16000,
-      "cantidad_venta_mensual": 206
-    },
-    {
-      "id": 62,
-      "nombre": "Tiramisú",
-      "precio": 8000,
-      "cantidad_venta_mensual": 136
-    },
-    {
-      "id": 63,
-      "nombre": "Tiramisú",
-      "precio": 15000,
-      "cantidad_venta_mensual": 124
-    },
-    {
-      "id": 64,
-      "nombre": "Flan",
-      "precio": 24000,
-      "cantidad_venta_mensual": 20
-    },
-    {
-      "id": 65,
-      "nombre": "Red Velvet",
-      "precio": 25000,
-      "cantidad_venta_mensual": 63
-    },
-    {
-      "id": 66,
-      "nombre": "Pie Limón",
-      "precio": 11000,
-      "cantidad_venta_mensual": 264
-    },
-    {
-      "id": 67,
-      "nombre": "Pie Limón",
-      "precio": 25000,
-      "cantidad_venta_mensual": 190
-    },
-    {
-      "id": 68,
-      "nombre": "Pie Limón",
-      "precio": 19000,
-      "cantidad_venta_mensual": 225
-    },
-    {
-      "id": 69,
-      "nombre": "Cupcake",
-      "precio": 10000,
-      "cantidad_venta_mensual": 85
-    },
-    {
-      "id": 70,
-      "nombre": "Cupcake",
-      "precio": 23000,
-      "cantidad_venta_mensual": 258
-    },
-    {
-      "id": 71,
-      "nombre": "Flan",
-      "precio": 24000,
-      "cantidad_venta_mensual": 262
-    },
-    {
-      "id": 72,
-      "nombre": "Cupcake",
-      "precio": 22000,
-      "cantidad_venta_mensual": 300
-    },
-    {
-      "id": 73,
-      "nombre": "Cheesecake",
-      "precio": 5000,
-      "cantidad_venta_mensual": 72
-    },
-    {
-      "id": 74,
-      "nombre": "Cupcake",
-      "precio": 18000,
-      "cantidad_venta_mensual": 119
-    },
-    {
-      "id": 75,
-      "nombre": "Cheesecake",
-      "precio": 13000,
-      "cantidad_venta_mensual": 128
-    },
-    {
-      "id": 76,
-      "nombre": "Macaron",
-      "precio": 12000,
-      "cantidad_venta_mensual": 186
-    },
-    {
-      "id": 77,
-      "nombre": "Macaron",
-      "precio": 18000,
-      "cantidad_venta_mensual": 87
-    },
-    {
-      "id": 78,
-      "nombre": "Red Velvet",
-      "precio": 19000,
-      "cantidad_venta_mensual": 284
-    },
-    {
-      "id": 79,
-      "nombre": "Macaron",
-      "precio": 9000,
-      "cantidad_venta_mensual": 292
-    },
-    {
-      "id": 80,
-      "nombre": "Macaron",
-      "precio": 21000,
-      "cantidad_venta_mensual": 29
-    },
-    {
-      "id": 81,
-      "nombre": "Cupcake",
-      "precio": 24000,
-      "cantidad_venta_mensual": 22
-    },
-    {
-      "id": 82,
-      "nombre": "Cupcake",
-      "precio": 9000,
-      "cantidad_venta_mensual": 262
-    },
-    {
-      "id": 83,
-      "nombre": "Macaron",
-      "precio": 6000,
-      "cantidad_venta_mensual": 186
-    },
-    {
-      "id": 84,
-      "nombre": "Macaron",
-      "precio": 22000,
-      "cantidad_venta_mensual": 267
-    },
-    {
-      "id": 85,
-      "nombre": "Macaron",
-      "precio": 6000,
-      "cantidad_venta_mensual": 147
-    },
-    {
-      "id": 86,
-      "nombre": "Tres Leches",
-      "precio": 6000,
-      "cantidad_venta_mensual": 70
-    },
-    {
-      "id": 87,
-      "nombre": "Donut",
-      "precio": 22000,
-      "cantidad_venta_mensual": 34
-    },
-    {
-      "id": 88,
-      "nombre": "Donut",
-      "precio": 15000,
-      "cantidad_venta_mensual": 278
-    },
-    {
-      "id": 89,
-      "nombre": "Tiramisú",
-      "precio": 13000,
-      "cantidad_venta_mensual": 251
-    },
-    {
-      "id": 90,
-      "nombre": "Macaron",
-      "precio": 20000,
-      "cantidad_venta_mensual": 279
-    },
-    {
-      "id": 91,
-      "nombre": "Macaron",
-      "precio": 13000,
-      "cantidad_venta_mensual": 123
-    },
-    {
-      "id": 92,
-      "nombre": "Cupcake",
-      "precio": 18000,
-      "cantidad_venta_mensual": 82
-    },
-    {
-      "id": 93,
-      "nombre": "Donut",
-      "precio": 15000,
-      "cantidad_venta_mensual": 57
-    },
-    {
-      "id": 94,
-      "nombre": "Pie Limón",
-      "precio": 7000,
-      "cantidad_venta_mensual": 128
-    },
-    {
-      "id": 95,
-      "nombre": "Brownie",
-      "precio": 9000,
-      "cantidad_venta_mensual": 207
-    },
-    {
-      "id": 96,
-      "nombre": "Tres Leches",
-      "precio": 9000,
-      "cantidad_venta_mensual": 259
-    },
-    {
-      "id": 97,
-      "nombre": "Brownie",
-      "precio": 17000,
-      "cantidad_venta_mensual": 269
-    },
-    {
-      "id": 98,
-      "nombre": "Tiramisú",
-      "precio": 10000,
-      "cantidad_venta_mensual": 240
-    },
-    {
-      "id": 99,
-      "nombre": "Pie Limón",
-      "precio": 15000,
-      "cantidad_venta_mensual": 235
-    },
-    {
-      "id": 100,
-      "nombre": "Red Velvet",
-      "precio": 15000,
-      "cantidad_venta_mensual": 67
-    }
-  ]
+  {
+    "idVenta": "ec1df0a8-2b62-4939-9a03-cf0a9787be77",
+    "codigoPedido": "PED-1001",
+    "fecha": "02/06/2026",
+    "hora": "15:26:00",
+    "cliente": "María Gómez",
+    "ciudad": "Bogotá",
+    "productos": [
+      {
+        "id": "32",
+        "nombre": "Flan de Caramelo",
+        "categoria": "Postres Fríos",
+        "precio": 9000,
+        "cantidad": 1
+      },
+      {
+        "id": "2",
+        "nombre": "Torta Tres Leches",
+        "categoria": "Tortas",
+        "precio": 62000,
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 71000,
+    "descuento": 0,
+    "total": 71000,
+    "metodoPago": "Tarjeta de crédito",
+    "estado": "Entregado",
+    "tiempoCompra": "2026-06-02T00:00:00"
+  },
+  {
+    "idVenta": "c3c69e4c-dc08-4615-8b12-d4209a88a93d",
+    "codigoPedido": "PED-1053",
+    "fecha": "02/06/2026",
+    "hora": "08:17:00",
+    "cliente": "Felipe Ortiz",
+    "ciudad": "Bogotá",
+    "productos": [
+      {
+        "id": "31",
+        "nombre": "Tiramisú",
+        "categoria": "Postres Fríos",
+        "precio": 14000,
+        "cantidad": 3
+      },
+      {
+        "id": "16",
+        "nombre": "Brownie Doble Chocolate",
+        "categoria": "Brownies",
+        "precio": 10500,
+        "cantidad": 3
+      },
+      {
+        "id": "10",
+        "nombre": "Cupcake Limón",
+        "categoria": "Cupcakes",
+        "precio": 7000,
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 80500,
+    "descuento": 0,
+    "total": 80500,
+    "metodoPago": "Efectivo contraentrega",
+    "estado": "Pendiente",
+    "tiempoCompra": "2026-06-02T00:00:00"
+  },
+  {
+    "idVenta": "cf938b74-c2c6-4636-a4c3-3052a3943176",
+    "codigoPedido": "PED-1031",
+    "fecha": "03/06/2026",
+    "hora": "12:16:00",
+    "cliente": "Julián Herrera",
+    "ciudad": "Cali",
+    "productos": [
+      {
+        "id": "5",
+        "nombre": "Torta de Zanahoria",
+        "categoria": "Tortas",
+        "precio": 58000,
+        "cantidad": 3
+      },
+      {
+        "id": "9",
+        "nombre": "Cupcake Chocolate",
+        "categoria": "Cupcakes",
+        "precio": 7000,
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 181000,
+    "descuento": 18100,
+    "total": 162900,
+    "metodoPago": "Tarjeta de crédito",
+    "estado": "Cancelado",
+    "tiempoCompra": "2026-06-03T00:00:00"
+  },
+  {
+    "idVenta": "0d115f8a-0ffa-4f6d-aa5b-22b41c9d6fc9",
+    "codigoPedido": "PED-1043",
+    "fecha": "03/06/2026",
+    "hora": "10:06:00",
+    "cliente": "María Gómez",
+    "ciudad": "Bogotá",
+    "productos": [
+      {
+        "id": "5",
+        "nombre": "Torta de Zanahoria",
+        "categoria": "Tortas",
+        "precio": 58000,
+        "cantidad": 1
+      },
+      {
+        "id": "2",
+        "nombre": "Torta Tres Leches",
+        "categoria": "Tortas",
+        "precio": 62000,
+        "cantidad": 2
+      }
+    ],
+    "subtotal": 182000,
+    "descuento": 18200,
+    "total": 163800,
+    "metodoPago": "Transferencia",
+    "estado": "Entregado",
+    "tiempoCompra": "2026-06-03T00:00:00"
+  },
+  {
+    "idVenta": "fc8968b7-98c4-4366-8375-e39494e56b99",
+    "codigoPedido": "PED-1033",
+    "fecha": "05/06/2026",
+    "hora": "10:16:00",
+    "cliente": "Julián Herrera",
+    "ciudad": "Cali",
+    "productos": [
+      {
+        "id": "1",
+        "nombre": "Torta Red Velvet",
+        "categoria": "Tortas",
+        "precio": 68000,
+        "cantidad": 1
+      },
+      {
+        "id": "13",
+        "nombre": "Brownie Clásico",
+        "categoria": "Brownies",
+        "precio": 8500,
+        "cantidad": 1
+      },
+      {
+        "id": "5",
+        "nombre": "Torta de Zanahoria",
+        "categoria": "Tortas",
+        "precio": 58000,
+        "cantidad": 2
+      },
+      {
+        "id": "9",
+        "nombre": "Cupcake Chocolate",
+        "categoria": "Cupcakes",
+        "precio": 7000,
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 199500,
+    "descuento": 19950,
+    "total": 179550,
+    "metodoPago": "Tarjeta de crédito",
+    "estado": "Entregado",
+    "tiempoCompra": "2026-06-05T00:00:00"
+  },
+  {
+    "idVenta": "af81738b-84fd-41a5-9833-4182dcccc6b0",
+    "codigoPedido": "PED-1029",
+    "fecha": "06/06/2026",
+    "hora": "11:54:00",
+    "cliente": "Valentina Díaz",
+    "ciudad": "Bogotá",
+    "productos": [
+      {
+        "id": "10",
+        "nombre": "Cupcake Limón",
+        "categoria": "Cupcakes",
+        "precio": 7000,
+        "cantidad": 3
+      },
+      {
+        "id": "21",
+        "nombre": "Dona Rellena de Arequipe",
+        "categoria": "Donas",
+        "precio": 7000,
+        "cantidad": 3
+      },
+      {
+        "id": "8",
+        "nombre": "Cupcake Red Velvet",
+        "categoria": "Cupcakes",
+        "precio": 7500,
+        "cantidad": 1
+      },
+      {
+        "id": "2",
+        "nombre": "Torta Tres Leches",
+        "categoria": "Tortas",
+        "precio": 62000,
+        "cantidad": 3
+      }
+    ],
+    "subtotal": 235500,
+    "descuento": 23550,
+    "total": 211950,
+    "metodoPago": "Transferencia",
+    "estado": "Entregado",
+    "tiempoCompra": "2026-06-06T00:00:00"
+  },
+  {
+    "idVenta": "c5bb43ca-5f32-4bee-9595-fd3043e86786",
+    "codigoPedido": "PED-1037",
+    "fecha": "06/06/2026",
+    "hora": "17:38:00",
+    "cliente": "Valentina Díaz",
+    "ciudad": "Bogotá",
+    "productos": [
+      {
+        "id": "11",
+        "nombre": "Cupcake Oreo",
+        "categoria": "Cupcakes",
+        "precio": 8000,
+        "cantidad": 3
+      },
+      {
+        "id": "36",
+        "nombre": "Cheesecake de Maracuyá",
+        "categoria": "Postres Fríos",
+        "precio": 13500,
+        "cantidad": 3
+      }
+    ],
+    "subtotal": 64500,
+    "descuento": 0,
+    "total": 64500,
+    "metodoPago": "Efectivo contraentrega",
+    "estado": "Entregado",
+    "tiempoCompra": "2026-06-06T00:00:00"
+  },
+  {
+    "idVenta": "33f7d5ee-e252-4dc1-9cee-2162a8d3961d",
+    "codigoPedido": "PED-1027",
+    "fecha": "07/06/2026",
+    "hora": "14:16:00",
+    "cliente": "Laura Castro",
+    "ciudad": "Cúcuta",
+    "productos": [
+      {
+        "id": "12",
+        "nombre": "Cupcake Coco",
+        "categoria": "Cupcakes",
+        "precio": 7500,
+        "cantidad": 1
+      },
+      {
+        "id": "31",
+        "nombre": "Tiramisú",
+        "categoria": "Postres Fríos",
+        "precio": 14000,
+        "cantidad": 2
+      },
+      {
+        "id": "13",
+        "nombre": "Brownie Clásico",
+        "categoria": "Brownies",
+        "precio": 8500,
+        "cantidad": 1
+      },
+      {
+        "id": "30",
+        "nombre": "Galleta Red Velvet",
+        "categoria": "Galletas",
+        "precio": 4500,
+        "cantidad": 2
+      }
+    ],
+    "subtotal": 53000,
+    "descuento": 0,
+    "total": 53000,
+    "metodoPago": "Tarjeta de crédito",
+    "estado": "Entregado",
+    "tiempoCompra": "2026-06-07T00:00:00"
+  },
+  {
+    "idVenta": "bd5929d0-75aa-4274-abd9-0a4aea53dfc0",
+    "codigoPedido": "PED-1034",
+    "fecha": "07/06/2026",
+    "hora": "08:08:00",
+    "cliente": "Valentina Díaz",
+    "ciudad": "Bogotá",
+    "productos": [
+      {
+        "id": "29",
+        "nombre": "Alfajor",
+        "categoria": "Galletas",
+        "precio": 5000,
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 5000,
+    "descuento": 0,
+    "total": 5000,
+    "metodoPago": "Efectivo contraentrega",
+    "estado": "Entregado",
+    "tiempoCompra": "2026-06-07T00:00:00"
+  },
+  {
+    "idVenta": "327c5db5-a406-413a-91dc-1f41e1fc14e0",
+    "codigoPedido": "PED-1052",
+    "fecha": "07/06/2026",
+    "hora": "18:02:00",
+    "cliente": "María Gómez",
+    "ciudad": "Bogotá",
+    "productos": [
+      {
+        "id": "3",
+        "nombre": "Cheesecake de Fresa",
+        "categoria": "Tortas",
+        "precio": 72000,
+        "cantidad": 3
+      },
+      {
+        "id": "32",
+        "nombre": "Flan de Caramelo",
+        "categoria": "Postres Fríos",
+        "precio": 9000,
+        "cantidad": 2
+      }
+    ],
+    "subtotal": 234000,
+    "descuento": 23400,
+    "total": 210600,
+    "metodoPago": "Efectivo contraentrega",
+    "estado": "Entregado",
+    "tiempoCompra": "2026-06-07T00:00:00"
+  },
+  {
+    "idVenta": "9f7c77bf-9843-4de7-8d78-de5681ef0077",
+    "codigoPedido": "PED-1002",
+    "fecha": "08/06/2026",
+    "hora": "11:47:00",
+    "cliente": "Felipe Ortiz",
+    "ciudad": "Bogotá",
+    "productos": [
+      {
+        "id": "24",
+        "nombre": "Dona de Maple",
+        "categoria": "Donas",
+        "precio": 6500,
+        "cantidad": 3
+      },
+      {
+        "id": "4",
+        "nombre": "Torta de Chocolate",
+        "categoria": "Tortas",
+        "precio": 65000,
+        "cantidad": 2
+      },
+      {
+        "id": "15",
+        "nombre": "Brownie Oreo",
+        "categoria": "Brownies",
+        "precio": 10000,
+        "cantidad": 3
+      },
+      {
+        "id": "3",
+        "nombre": "Cheesecake de Fresa",
+        "categoria": "Tortas",
+        "precio": 72000,
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 251500,
+    "descuento": 25150,
+    "total": 226350,
+    "metodoPago": "Transferencia",
+    "estado": "Entregado",
+    "tiempoCompra": "2026-06-08T00:00:00"
+  },
+  {
+    "idVenta": "3134551d-be8f-4c66-8e0f-97f8b1644bdb",
+    "codigoPedido": "PED-1035",
+    "fecha": "08/06/2026",
+    "hora": "08:53:00",
+    "cliente": "Andrés Suárez",
+    "ciudad": "Barranquilla",
+    "productos": [
+      {
+        "id": "1",
+        "nombre": "Torta Red Velvet",
+        "categoria": "Tortas",
+        "precio": 68000,
+        "cantidad": 2
+      },
+      {
+        "id": "34",
+        "nombre": "Panna Cotta",
+        "categoria": "Postres Fríos",
+        "precio": 12000,
+        "cantidad": 2
+      },
+      {
+        "id": "6",
+        "nombre": "Torta Milhojas",
+        "categoria": "Tortas",
+        "precio": 75000,
+        "cantidad": 3
+      },
+      {
+        "id": "32",
+        "nombre": "Flan de Caramelo",
+        "categoria": "Postres Fríos",
+        "precio": 9000,
+        "cantidad": 3
+      }
+    ],
+    "subtotal": 412000,
+    "descuento": 41200,
+    "total": 370800,
+    "metodoPago": "Efectivo contraentrega",
+    "estado": "Preparando",
+    "tiempoCompra": "2026-06-08T00:00:00"
+  },
+  {
+    "idVenta": "86f84e25-4311-4c21-85cd-d91cb3875b2d",
+    "codigoPedido": "PED-1051",
+    "fecha": "11/06/2026",
+    "hora": "20:25:00",
+    "cliente": "Carlos Pérez",
+    "ciudad": "Medellín",
+    "productos": [
+      {
+        "id": "23",
+        "nombre": "Dona Red Velvet",
+        "categoria": "Donas",
+        "precio": 7500,
+        "cantidad": 3
+      },
+      {
+        "id": "20",
+        "nombre": "Dona de Chocolate",
+        "categoria": "Donas",
+        "precio": 6000,
+        "cantidad": 3
+      },
+      {
+        "id": "32",
+        "nombre": "Flan de Caramelo",
+        "categoria": "Postres Fríos",
+        "precio": 9000,
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 49500,
+    "descuento": 0,
+    "total": 49500,
+    "metodoPago": "Transferencia",
+    "estado": "Cancelado",
+    "tiempoCompra": "2026-06-11T00:00:00"
+  },
+  {
+    "idVenta": "2677f591-5032-4961-be25-5cd4ccc77274",
+    "codigoPedido": "PED-1023",
+    "fecha": "12/06/2026",
+    "hora": "19:19:00",
+    "cliente": "Valentina Díaz",
+    "ciudad": "Bogotá",
+    "productos": [
+      {
+        "id": "16",
+        "nombre": "Brownie Doble Chocolate",
+        "categoria": "Brownies",
+        "precio": 10500,
+        "cantidad": 3
+      },
+      {
+        "id": "30",
+        "nombre": "Galleta Red Velvet",
+        "categoria": "Galletas",
+        "precio": 4500,
+        "cantidad": 3
+      },
+      {
+        "id": "25",
+        "nombre": "Macaron Frambuesa",
+        "categoria": "Galletas",
+        "precio": 4500,
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 49500,
+    "descuento": 0,
+    "total": 49500,
+    "metodoPago": "PSE",
+    "estado": "Entregado",
+    "tiempoCompra": "2026-06-12T00:00:00"
+  },
+  {
+    "idVenta": "4e55da34-5680-4a16-9e56-a22b1d93cbe7",
+    "codigoPedido": "PED-1045",
+    "fecha": "12/06/2026",
+    "hora": "09:56:00",
+    "cliente": "Ana Torres",
+    "ciudad": "Cali",
+    "productos": [
+      {
+        "id": "27",
+        "nombre": "Galleta Chispas de Chocolate",
+        "categoria": "Galletas",
+        "precio": 4000,
+        "cantidad": 1
+      },
+      {
+        "id": "23",
+        "nombre": "Dona Red Velvet",
+        "categoria": "Donas",
+        "precio": 7500,
+        "cantidad": 2
+      },
+      {
+        "id": "10",
+        "nombre": "Cupcake Limón",
+        "categoria": "Cupcakes",
+        "precio": 7000,
+        "cantidad": 2
+      }
+    ],
+    "subtotal": 33000,
+    "descuento": 0,
+    "total": 33000,
+    "metodoPago": "PSE",
+    "estado": "Entregado",
+    "tiempoCompra": "2026-06-12T00:00:00"
+  },
+  {
+    "idVenta": "7a6d5e00-d097-4b0c-90db-0b6ae447c65d",
+    "codigoPedido": "PED-1042",
+    "fecha": "13/06/2026",
+    "hora": "18:24:00",
+    "cliente": "Sofía Navarro",
+    "ciudad": "Cartagena",
+    "productos": [
+      {
+        "id": "21",
+        "nombre": "Dona Rellena de Arequipe",
+        "categoria": "Donas",
+        "precio": 7000,
+        "cantidad": 2
+      },
+      {
+        "id": "6",
+        "nombre": "Torta Milhojas",
+        "categoria": "Tortas",
+        "precio": 75000,
+        "cantidad": 1
+      },
+      {
+        "id": "30",
+        "nombre": "Galleta Red Velvet",
+        "categoria": "Galletas",
+        "precio": 4500,
+        "cantidad": 2
+      }
+    ],
+    "subtotal": 98000,
+    "descuento": 0,
+    "total": 98000,
+    "metodoPago": "PSE",
+    "estado": "Entregado",
+    "tiempoCompra": "2026-06-13T00:00:00"
+  },
+  {
+    "idVenta": "4127c19b-08aa-47a6-b19a-572397db979b",
+    "codigoPedido": "PED-1018",
+    "fecha": "15/06/2026",
+    "hora": "13:07:00",
+    "cliente": "Isabella Reyes",
+    "ciudad": "Cúcuta",
+    "productos": [
+      {
+        "id": "19",
+        "nombre": "Dona Glaseada",
+        "categoria": "Donas",
+        "precio": 5500,
+        "cantidad": 1
+      },
+      {
+        "id": "6",
+        "nombre": "Torta Milhojas",
+        "categoria": "Tortas",
+        "precio": 75000,
+        "cantidad": 2
+      },
+      {
+        "id": "26",
+        "nombre": "Macaron Pistacho",
+        "categoria": "Galletas",
+        "precio": 4800,
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 160300,
+    "descuento": 16030,
+    "total": 144270,
+    "metodoPago": "PSE",
+    "estado": "Cancelado",
+    "tiempoCompra": "2026-06-15T00:00:00"
+  },
+  {
+    "idVenta": "3eec158c-f6f5-4604-9e69-cd540b42ef83",
+    "codigoPedido": "PED-1038",
+    "fecha": "15/06/2026",
+    "hora": "14:22:00",
+    "cliente": "Camila Rojas",
+    "ciudad": "Bucaramanga",
+    "productos": [
+      {
+        "id": "9",
+        "nombre": "Cupcake Chocolate",
+        "categoria": "Cupcakes",
+        "precio": 7000,
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 7000,
+    "descuento": 0,
+    "total": 7000,
+    "metodoPago": "Tarjeta de crédito",
+    "estado": "Preparando",
+    "tiempoCompra": "2026-06-15T00:00:00"
+  },
+  {
+    "idVenta": "6644fc6e-9cd2-4a7c-9587-83adb5d2b05f",
+    "codigoPedido": "PED-1024",
+    "fecha": "16/06/2026",
+    "hora": "14:22:00",
+    "cliente": "Daniela Vargas",
+    "ciudad": "Medellín",
+    "productos": [
+      {
+        "id": "24",
+        "nombre": "Dona de Maple",
+        "categoria": "Donas",
+        "precio": 6500,
+        "cantidad": 2
+      },
+      {
+        "id": "26",
+        "nombre": "Macaron Pistacho",
+        "categoria": "Galletas",
+        "precio": 4800,
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 17800,
+    "descuento": 0,
+    "total": 17800,
+    "metodoPago": "Efectivo contraentrega",
+    "estado": "Entregado",
+    "tiempoCompra": "2026-06-16T00:00:00"
+  },
+  {
+    "idVenta": "40eaed0a-e4b6-4b15-b4e8-f77208649984",
+    "codigoPedido": "PED-1048",
+    "fecha": "16/06/2026",
+    "hora": "19:20:00",
+    "cliente": "Isabella Reyes",
+    "ciudad": "Cúcuta",
+    "productos": [
+      {
+        "id": "15",
+        "nombre": "Brownie Oreo",
+        "categoria": "Brownies",
+        "precio": 10000,
+        "cantidad": 3
+      },
+      {
+        "id": "12",
+        "nombre": "Cupcake Coco",
+        "categoria": "Cupcakes",
+        "precio": 7500,
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 37500,
+    "descuento": 0,
+    "total": 37500,
+    "metodoPago": "PSE",
+    "estado": "Enviado",
+    "tiempoCompra": "2026-06-16T00:00:00"
+  },
+  {
+    "idVenta": "3c2e07ab-d2ef-4c2a-8da2-fe2c73e4e425",
+    "codigoPedido": "PED-1054",
+    "fecha": "16/06/2026",
+    "hora": "16:30:00",
+    "cliente": "Santiago Morales",
+    "ciudad": "Pereira",
+    "productos": [
+      {
+        "id": "19",
+        "nombre": "Dona Glaseada",
+        "categoria": "Donas",
+        "precio": 5500,
+        "cantidad": 2
+      }
+    ],
+    "subtotal": 11000,
+    "descuento": 0,
+    "total": 11000,
+    "metodoPago": "Efectivo contraentrega",
+    "estado": "Entregado",
+    "tiempoCompra": "2026-06-16T00:00:00"
+  },
+  {
+    "idVenta": "b8b60ff2-076d-4fd5-80a0-afa987f4be40",
+    "codigoPedido": "PED-1059",
+    "fecha": "16/06/2026",
+    "hora": "15:32:00",
+    "cliente": "Luis Ramírez",
+    "ciudad": "Cúcuta",
+    "productos": [
+      {
+        "id": "6",
+        "nombre": "Torta Milhojas",
+        "categoria": "Tortas",
+        "precio": 75000,
+        "cantidad": 3
+      },
+      {
+        "id": "31",
+        "nombre": "Tiramisú",
+        "categoria": "Postres Fríos",
+        "precio": 14000,
+        "cantidad": 2
+      }
+    ],
+    "subtotal": 253000,
+    "descuento": 25300,
+    "total": 227700,
+    "metodoPago": "Tarjeta de crédito",
+    "estado": "Entregado",
+    "tiempoCompra": "2026-06-16T00:00:00"
+  },
+  {
+    "idVenta": "933c47c3-4233-4ddd-a7c9-fae6ef2a68fe",
+    "codigoPedido": "PED-1003",
+    "fecha": "17/06/2026",
+    "hora": "17:50:00",
+    "cliente": "Mateo Londoño",
+    "ciudad": "Manizales",
+    "productos": [
+      {
+        "id": "20",
+        "nombre": "Dona de Chocolate",
+        "categoria": "Donas",
+        "precio": 6000,
+        "cantidad": 2
+      },
+      {
+        "id": "22",
+        "nombre": "Dona de Canela",
+        "categoria": "Donas",
+        "precio": 5500,
+        "cantidad": 1
+      },
+      {
+        "id": "6",
+        "nombre": "Torta Milhojas",
+        "categoria": "Tortas",
+        "precio": 75000,
+        "cantidad": 3
+      }
+    ],
+    "subtotal": 242500,
+    "descuento": 24250,
+    "total": 218250,
+    "metodoPago": "PSE",
+    "estado": "Entregado",
+    "tiempoCompra": "2026-06-17T00:00:00"
+  },
+  {
+    "idVenta": "48956d4e-6c96-49a0-8806-7b169ec522de",
+    "codigoPedido": "PED-1032",
+    "fecha": "17/06/2026",
+    "hora": "18:02:00",
+    "cliente": "Julián Herrera",
+    "ciudad": "Cali",
+    "productos": [
+      {
+        "id": "6",
+        "nombre": "Torta Milhojas",
+        "categoria": "Tortas",
+        "precio": 75000,
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 75000,
+    "descuento": 0,
+    "total": 75000,
+    "metodoPago": "Transferencia",
+    "estado": "Enviado",
+    "tiempoCompra": "2026-06-17T00:00:00"
+  },
+  {
+    "idVenta": "7d58fca6-5a7b-48f1-a198-6c71898f650b",
+    "codigoPedido": "PED-1028",
+    "fecha": "18/06/2026",
+    "hora": "16:48:00",
+    "cliente": "Valentina Díaz",
+    "ciudad": "Bogotá",
+    "productos": [
+      {
+        "id": "24",
+        "nombre": "Dona de Maple",
+        "categoria": "Donas",
+        "precio": 6500,
+        "cantidad": 3
+      },
+      {
+        "id": "19",
+        "nombre": "Dona Glaseada",
+        "categoria": "Donas",
+        "precio": 5500,
+        "cantidad": 1
+      },
+      {
+        "id": "11",
+        "nombre": "Cupcake Oreo",
+        "categoria": "Cupcakes",
+        "precio": 8000,
+        "cantidad": 3
+      },
+      {
+        "id": "10",
+        "nombre": "Cupcake Limón",
+        "categoria": "Cupcakes",
+        "precio": 7000,
+        "cantidad": 3
+      }
+    ],
+    "subtotal": 70000,
+    "descuento": 0,
+    "total": 70000,
+    "metodoPago": "Tarjeta de crédito",
+    "estado": "Entregado",
+    "tiempoCompra": "2026-06-18T00:00:00"
+  },
+  {
+    "idVenta": "18da5d3d-e460-4ad3-bbc9-2c95c010a06a",
+    "codigoPedido": "PED-1015",
+    "fecha": "19/06/2026",
+    "hora": "19:27:00",
+    "cliente": "Daniela Vargas",
+    "ciudad": "Medellín",
+    "productos": [
+      {
+        "id": "12",
+        "nombre": "Cupcake Coco",
+        "categoria": "Cupcakes",
+        "precio": 7500,
+        "cantidad": 3
+      }
+    ],
+    "subtotal": 22500,
+    "descuento": 0,
+    "total": 22500,
+    "metodoPago": "Tarjeta de crédito",
+    "estado": "Entregado",
+    "tiempoCompra": "2026-06-19T00:00:00"
+  },
+  {
+    "idVenta": "d311c2a4-511a-4725-a0c7-8feb7d50b565",
+    "codigoPedido": "PED-1050",
+    "fecha": "20/06/2026",
+    "hora": "12:55:00",
+    "cliente": "Ana Torres",
+    "ciudad": "Cali",
+    "productos": [
+      {
+        "id": "12",
+        "nombre": "Cupcake Coco",
+        "categoria": "Cupcakes",
+        "precio": 7500,
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 7500,
+    "descuento": 0,
+    "total": 7500,
+    "metodoPago": "Efectivo contraentrega",
+    "estado": "Enviado",
+    "tiempoCompra": "2026-06-20T00:00:00"
+  },
+  {
+    "idVenta": "a0627177-8e49-4a64-ba96-01dc3d130de2",
+    "codigoPedido": "PED-1020",
+    "fecha": "22/06/2026",
+    "hora": "17:43:00",
+    "cliente": "Andrés Suárez",
+    "ciudad": "Barranquilla",
+    "productos": [
+      {
+        "id": "6",
+        "nombre": "Torta Milhojas",
+        "categoria": "Tortas",
+        "precio": 75000,
+        "cantidad": 3
+      },
+      {
+        "id": "12",
+        "nombre": "Cupcake Coco",
+        "categoria": "Cupcakes",
+        "precio": 7500,
+        "cantidad": 3
+      }
+    ],
+    "subtotal": 247500,
+    "descuento": 24750,
+    "total": 222750,
+    "metodoPago": "Transferencia",
+    "estado": "Enviado",
+    "tiempoCompra": "2026-06-22T00:00:00"
+  },
+  {
+    "idVenta": "84ac766e-8bc1-47de-b9f1-869ed9ec9945",
+    "codigoPedido": "PED-1026",
+    "fecha": "22/06/2026",
+    "hora": "13:36:00",
+    "cliente": "Ana Torres",
+    "ciudad": "Cali",
+    "productos": [
+      {
+        "id": "25",
+        "nombre": "Macaron Frambuesa",
+        "categoria": "Galletas",
+        "precio": 4500,
+        "cantidad": 3
+      },
+      {
+        "id": "17",
+        "nombre": "Blondie",
+        "categoria": "Brownies",
+        "precio": 9000,
+        "cantidad": 2
+      },
+      {
+        "id": "22",
+        "nombre": "Dona de Canela",
+        "categoria": "Donas",
+        "precio": 5500,
+        "cantidad": 2
+      },
+      {
+        "id": "3",
+        "nombre": "Cheesecake de Fresa",
+        "categoria": "Tortas",
+        "precio": 72000,
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 114500,
+    "descuento": 11450,
+    "total": 103050,
+    "metodoPago": "PSE",
+    "estado": "Cancelado",
+    "tiempoCompra": "2026-06-22T00:00:00"
+  },
+  {
+    "idVenta": "471451f5-5ced-4fd3-8bba-2c5ce8f59cbf",
+    "codigoPedido": "PED-1008",
+    "fecha": "23/06/2026",
+    "hora": "15:12:00",
+    "cliente": "Santiago Morales",
+    "ciudad": "Pereira",
+    "productos": [
+      {
+        "id": "24",
+        "nombre": "Dona de Maple",
+        "categoria": "Donas",
+        "precio": 6500,
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 6500,
+    "descuento": 0,
+    "total": 6500,
+    "metodoPago": "Tarjeta de crédito",
+    "estado": "Pendiente",
+    "tiempoCompra": "2026-06-23T00:00:00"
+  },
+  {
+    "idVenta": "bace448b-4ad5-435c-928b-245d1d33b7f0",
+    "codigoPedido": "PED-1016",
+    "fecha": "23/06/2026",
+    "hora": "20:01:00",
+    "cliente": "Camila Rojas",
+    "ciudad": "Bucaramanga",
+    "productos": [
+      {
+        "id": "12",
+        "nombre": "Cupcake Coco",
+        "categoria": "Cupcakes",
+        "precio": 7500,
+        "cantidad": 1
+      },
+      {
+        "id": "36",
+        "nombre": "Cheesecake de Maracuyá",
+        "categoria": "Postres Fríos",
+        "precio": 13500,
+        "cantidad": 1
+      },
+      {
+        "id": "21",
+        "nombre": "Dona Rellena de Arequipe",
+        "categoria": "Donas",
+        "precio": 7000,
+        "cantidad": 1
+      },
+      {
+        "id": "18",
+        "nombre": "Brownie Nutella",
+        "categoria": "Brownies",
+        "precio": 11000,
+        "cantidad": 2
+      }
+    ],
+    "subtotal": 50000,
+    "descuento": 0,
+    "total": 50000,
+    "metodoPago": "PSE",
+    "estado": "Entregado",
+    "tiempoCompra": "2026-06-23T00:00:00"
+  },
+  {
+    "idVenta": "855d0a26-5e52-43c2-86bc-1111f767e5f1",
+    "codigoPedido": "PED-1017",
+    "fecha": "23/06/2026",
+    "hora": "08:26:00",
+    "cliente": "Camila Rojas",
+    "ciudad": "Bucaramanga",
+    "productos": [
+      {
+        "id": "29",
+        "nombre": "Alfajor",
+        "categoria": "Galletas",
+        "precio": 5000,
+        "cantidad": 2
+      },
+      {
+        "id": "24",
+        "nombre": "Dona de Maple",
+        "categoria": "Donas",
+        "precio": 6500,
+        "cantidad": 2
+      },
+      {
+        "id": "21",
+        "nombre": "Dona Rellena de Arequipe",
+        "categoria": "Donas",
+        "precio": 7000,
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 30000,
+    "descuento": 0,
+    "total": 30000,
+    "metodoPago": "PSE",
+    "estado": "Entregado",
+    "tiempoCompra": "2026-06-23T00:00:00"
+  },
+  {
+    "idVenta": "48532b6c-bbf7-4c2f-806a-3a01808cb2ce",
+    "codigoPedido": "PED-1057",
+    "fecha": "24/06/2026",
+    "hora": "08:47:00",
+    "cliente": "Isabella Reyes",
+    "ciudad": "Cúcuta",
+    "productos": [
+      {
+        "id": "5",
+        "nombre": "Torta de Zanahoria",
+        "categoria": "Tortas",
+        "precio": 58000,
+        "cantidad": 1
+      },
+      {
+        "id": "2",
+        "nombre": "Torta Tres Leches",
+        "categoria": "Tortas",
+        "precio": 62000,
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 120000,
+    "descuento": 12000,
+    "total": 108000,
+    "metodoPago": "Tarjeta de crédito",
+    "estado": "Entregado",
+    "tiempoCompra": "2026-06-24T00:00:00"
+  },
+  {
+    "idVenta": "f5f0587b-1b9d-4ff2-a8dd-b36b66d10dd6",
+    "codigoPedido": "PED-1000",
+    "fecha": "25/06/2026",
+    "hora": "10:46:00",
+    "cliente": "Isabella Reyes",
+    "ciudad": "Cúcuta",
+    "productos": [
+      {
+        "id": "6",
+        "nombre": "Torta Milhojas",
+        "categoria": "Tortas",
+        "precio": 75000,
+        "cantidad": 2
+      },
+      {
+        "id": "2",
+        "nombre": "Torta Tres Leches",
+        "categoria": "Tortas",
+        "precio": 62000,
+        "cantidad": 2
+      },
+      {
+        "id": "21",
+        "nombre": "Dona Rellena de Arequipe",
+        "categoria": "Donas",
+        "precio": 7000,
+        "cantidad": 3
+      }
+    ],
+    "subtotal": 295000,
+    "descuento": 29500,
+    "total": 265500,
+    "metodoPago": "Efectivo contraentrega",
+    "estado": "Enviado",
+    "tiempoCompra": "2026-06-25T00:00:00"
+  },
+  {
+    "idVenta": "379eb70b-e26e-4ccb-a023-b5e8061b5067",
+    "codigoPedido": "PED-1006",
+    "fecha": "26/06/2026",
+    "hora": "16:09:00",
+    "cliente": "Carlos Pérez",
+    "ciudad": "Medellín",
+    "productos": [
+      {
+        "id": "34",
+        "nombre": "Panna Cotta",
+        "categoria": "Postres Fríos",
+        "precio": 12000,
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 12000,
+    "descuento": 0,
+    "total": 12000,
+    "metodoPago": "Tarjeta de crédito",
+    "estado": "Entregado",
+    "tiempoCompra": "2026-06-26T00:00:00"
+  },
+  {
+    "idVenta": "49ba7051-92b0-4a47-940b-86edbe784239",
+    "codigoPedido": "PED-1030",
+    "fecha": "26/06/2026",
+    "hora": "19:01:00",
+    "cliente": "Camila Rojas",
+    "ciudad": "Bucaramanga",
+    "productos": [
+      {
+        "id": "20",
+        "nombre": "Dona de Chocolate",
+        "categoria": "Donas",
+        "precio": 6000,
+        "cantidad": 3
+      },
+      {
+        "id": "30",
+        "nombre": "Galleta Red Velvet",
+        "categoria": "Galletas",
+        "precio": 4500,
+        "cantidad": 3
+      },
+      {
+        "id": "34",
+        "nombre": "Panna Cotta",
+        "categoria": "Postres Fríos",
+        "precio": 12000,
+        "cantidad": 2
+      }
+    ],
+    "subtotal": 55500,
+    "descuento": 0,
+    "total": 55500,
+    "metodoPago": "Efectivo contraentrega",
+    "estado": "Entregado",
+    "tiempoCompra": "2026-06-26T00:00:00"
+  },
+  {
+    "idVenta": "7c0a3698-f116-4ce6-a3a6-74f8cdfd22dc",
+    "codigoPedido": "PED-1049",
+    "fecha": "27/06/2026",
+    "hora": "17:50:00",
+    "cliente": "Laura Castro",
+    "ciudad": "Cúcuta",
+    "productos": [
+      {
+        "id": "30",
+        "nombre": "Galleta Red Velvet",
+        "categoria": "Galletas",
+        "precio": 4500,
+        "cantidad": 3
+      },
+      {
+        "id": "4",
+        "nombre": "Torta de Chocolate",
+        "categoria": "Tortas",
+        "precio": 65000,
+        "cantidad": 2
+      }
+    ],
+    "subtotal": 143500,
+    "descuento": 14350,
+    "total": 129150,
+    "metodoPago": "Tarjeta de crédito",
+    "estado": "Pendiente",
+    "tiempoCompra": "2026-06-27T00:00:00"
+  },
+  {
+    "idVenta": "79ea5114-d9c8-4cd4-843a-829e442ac4ce",
+    "codigoPedido": "PED-1005",
+    "fecha": "28/06/2026",
+    "hora": "20:29:00",
+    "cliente": "María Gómez",
+    "ciudad": "Bogotá",
+    "productos": [
+      {
+        "id": "19",
+        "nombre": "Dona Glaseada",
+        "categoria": "Donas",
+        "precio": 5500,
+        "cantidad": 2
+      },
+      {
+        "id": "23",
+        "nombre": "Dona Red Velvet",
+        "categoria": "Donas",
+        "precio": 7500,
+        "cantidad": 2
+      },
+      {
+        "id": "7",
+        "nombre": "Cupcake Vainilla",
+        "categoria": "Cupcakes",
+        "precio": 6500,
+        "cantidad": 3
+      }
+    ],
+    "subtotal": 45500,
+    "descuento": 0,
+    "total": 45500,
+    "metodoPago": "Efectivo contraentrega",
+    "estado": "Enviado",
+    "tiempoCompra": "2026-06-28T00:00:00"
+  },
+  {
+    "idVenta": "4a72647b-ff60-4120-b760-e70c914fbede",
+    "codigoPedido": "PED-1044",
+    "fecha": "30/06/2026",
+    "hora": "16:34:00",
+    "cliente": "Daniela Vargas",
+    "ciudad": "Medellín",
+    "productos": [
+      {
+        "id": "29",
+        "nombre": "Alfajor",
+        "categoria": "Galletas",
+        "precio": 5000,
+        "cantidad": 1
+      },
+      {
+        "id": "21",
+        "nombre": "Dona Rellena de Arequipe",
+        "categoria": "Donas",
+        "precio": 7000,
+        "cantidad": 3
+      }
+    ],
+    "subtotal": 26000,
+    "descuento": 0,
+    "total": 26000,
+    "metodoPago": "PSE",
+    "estado": "Entregado",
+    "tiempoCompra": "2026-06-30T00:00:00"
+  },
+  {
+    "idVenta": "4f83380a-9397-4c8c-91c4-cb9481c37285",
+    "codigoPedido": "PED-1055",
+    "fecha": "30/06/2026",
+    "hora": "10:17:00",
+    "cliente": "Valentina Díaz",
+    "ciudad": "Bogotá",
+    "productos": [
+      {
+        "id": "13",
+        "nombre": "Brownie Clásico",
+        "categoria": "Brownies",
+        "precio": 8500,
+        "cantidad": 1
+      },
+      {
+        "id": "8",
+        "nombre": "Cupcake Red Velvet",
+        "categoria": "Cupcakes",
+        "precio": 7500,
+        "cantidad": 2
+      },
+      {
+        "id": "15",
+        "nombre": "Brownie Oreo",
+        "categoria": "Brownies",
+        "precio": 10000,
+        "cantidad": 1
+      },
+      {
+        "id": "26",
+        "nombre": "Macaron Pistacho",
+        "categoria": "Galletas",
+        "precio": 4800,
+        "cantidad": 3
+      }
+    ],
+    "subtotal": 47900,
+    "descuento": 0,
+    "total": 47900,
+    "metodoPago": "Efectivo contraentrega",
+    "estado": "Preparando",
+    "tiempoCompra": "2026-06-30T00:00:00"
+  },
+  {
+    "idVenta": "a9397750-d80a-4689-be85-660da2c31323",
+    "codigoPedido": "PED-1011",
+    "fecha": "02/07/2026",
+    "hora": "16:18:00",
+    "cliente": "Valentina Díaz",
+    "ciudad": "Bogotá",
+    "productos": [
+      {
+        "id": "29",
+        "nombre": "Alfajor",
+        "categoria": "Galletas",
+        "precio": 5000,
+        "cantidad": 3
+      },
+      {
+        "id": "5",
+        "nombre": "Torta de Zanahoria",
+        "categoria": "Tortas",
+        "precio": 58000,
+        "cantidad": 3
+      }
+    ],
+    "subtotal": 189000,
+    "descuento": 18900,
+    "total": 170100,
+    "metodoPago": "PSE",
+    "estado": "Entregado",
+    "tiempoCompra": "2026-07-02T00:00:00"
+  },
+  {
+    "idVenta": "067745b2-f6b2-40c8-b1ab-e296b88cbdad",
+    "codigoPedido": "PED-1013",
+    "fecha": "02/07/2026",
+    "hora": "16:30:00",
+    "cliente": "Felipe Ortiz",
+    "ciudad": "Bogotá",
+    "productos": [
+      {
+        "id": "17",
+        "nombre": "Blondie",
+        "categoria": "Brownies",
+        "precio": 9000,
+        "cantidad": 3
+      },
+      {
+        "id": "11",
+        "nombre": "Cupcake Oreo",
+        "categoria": "Cupcakes",
+        "precio": 8000,
+        "cantidad": 3
+      },
+      {
+        "id": "6",
+        "nombre": "Torta Milhojas",
+        "categoria": "Tortas",
+        "precio": 75000,
+        "cantidad": 3
+      },
+      {
+        "id": "23",
+        "nombre": "Dona Red Velvet",
+        "categoria": "Donas",
+        "precio": 7500,
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 283500,
+    "descuento": 28350,
+    "total": 255150,
+    "metodoPago": "PSE",
+    "estado": "Cancelado",
+    "tiempoCompra": "2026-07-02T00:00:00"
+  },
+  {
+    "idVenta": "9ebc7fb1-6e61-45a1-87f2-bc6a27e06d94",
+    "codigoPedido": "PED-1039",
+    "fecha": "04/07/2026",
+    "hora": "10:35:00",
+    "cliente": "Laura Castro",
+    "ciudad": "Cúcuta",
+    "productos": [
+      {
+        "id": "23",
+        "nombre": "Dona Red Velvet",
+        "categoria": "Donas",
+        "precio": 7500,
+        "cantidad": 2
+      },
+      {
+        "id": "7",
+        "nombre": "Cupcake Vainilla",
+        "categoria": "Cupcakes",
+        "precio": 6500,
+        "cantidad": 3
+      },
+      {
+        "id": "17",
+        "nombre": "Blondie",
+        "categoria": "Brownies",
+        "precio": 9000,
+        "cantidad": 2
+      },
+      {
+        "id": "10",
+        "nombre": "Cupcake Limón",
+        "categoria": "Cupcakes",
+        "precio": 7000,
+        "cantidad": 2
+      }
+    ],
+    "subtotal": 66500,
+    "descuento": 0,
+    "total": 66500,
+    "metodoPago": "Efectivo contraentrega",
+    "estado": "Enviado",
+    "tiempoCompra": "2026-07-04T00:00:00"
+  },
+  {
+    "idVenta": "e69ed473-acd1-44bd-9605-87e97ffa674c",
+    "codigoPedido": "PED-1004",
+    "fecha": "05/07/2026",
+    "hora": "17:07:00",
+    "cliente": "Ana Torres",
+    "ciudad": "Cali",
+    "productos": [
+      {
+        "id": "12",
+        "nombre": "Cupcake Coco",
+        "categoria": "Cupcakes",
+        "precio": 7500,
+        "cantidad": 3
+      },
+      {
+        "id": "22",
+        "nombre": "Dona de Canela",
+        "categoria": "Donas",
+        "precio": 5500,
+        "cantidad": 3
+      }
+    ],
+    "subtotal": 39000,
+    "descuento": 0,
+    "total": 39000,
+    "metodoPago": "Tarjeta de crédito",
+    "estado": "Pendiente",
+    "tiempoCompra": "2026-07-05T00:00:00"
+  },
+  {
+    "idVenta": "0728b8d4-37f3-49bb-b0ec-ddac689921f0",
+    "codigoPedido": "PED-1056",
+    "fecha": "05/07/2026",
+    "hora": "11:58:00",
+    "cliente": "María Gómez",
+    "ciudad": "Bogotá",
+    "productos": [
+      {
+        "id": "35",
+        "nombre": "Mousse de Chocolate",
+        "categoria": "Postres Fríos",
+        "precio": 13000,
+        "cantidad": 1
+      },
+      {
+        "id": "13",
+        "nombre": "Brownie Clásico",
+        "categoria": "Brownies",
+        "precio": 8500,
+        "cantidad": 1
+      },
+      {
+        "id": "29",
+        "nombre": "Alfajor",
+        "categoria": "Galletas",
+        "precio": 5000,
+        "cantidad": 2
+      }
+    ],
+    "subtotal": 31500,
+    "descuento": 0,
+    "total": 31500,
+    "metodoPago": "Tarjeta de crédito",
+    "estado": "Entregado",
+    "tiempoCompra": "2026-07-05T00:00:00"
+  },
+  {
+    "idVenta": "2ddbd4f9-9ad1-4702-8e8d-109a4510c9ae",
+    "codigoPedido": "PED-1041",
+    "fecha": "07/07/2026",
+    "hora": "12:22:00",
+    "cliente": "Sofía Navarro",
+    "ciudad": "Cartagena",
+    "productos": [
+      {
+        "id": "31",
+        "nombre": "Tiramisú",
+        "categoria": "Postres Fríos",
+        "precio": 14000,
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 14000,
+    "descuento": 0,
+    "total": 14000,
+    "metodoPago": "Efectivo contraentrega",
+    "estado": "Entregado",
+    "tiempoCompra": "2026-07-07T00:00:00"
+  },
+  {
+    "idVenta": "9ce82d4d-c5a1-4d0e-b8b5-188a6ed78999",
+    "codigoPedido": "PED-1040",
+    "fecha": "08/07/2026",
+    "hora": "09:35:00",
+    "cliente": "Julián Herrera",
+    "ciudad": "Cali",
+    "productos": [
+      {
+        "id": "9",
+        "nombre": "Cupcake Chocolate",
+        "categoria": "Cupcakes",
+        "precio": 7000,
+        "cantidad": 3
+      }
+    ],
+    "subtotal": 21000,
+    "descuento": 0,
+    "total": 21000,
+    "metodoPago": "Transferencia",
+    "estado": "Entregado",
+    "tiempoCompra": "2026-07-08T00:00:00"
+  },
+  {
+    "idVenta": "fac3abaa-2e3b-4256-ba71-8ffebb25a3f3",
+    "codigoPedido": "PED-1036",
+    "fecha": "09/07/2026",
+    "hora": "17:42:00",
+    "cliente": "Sofía Navarro",
+    "ciudad": "Cartagena",
+    "productos": [
+      {
+        "id": "10",
+        "nombre": "Cupcake Limón",
+        "categoria": "Cupcakes",
+        "precio": 7000,
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 7000,
+    "descuento": 0,
+    "total": 7000,
+    "metodoPago": "Tarjeta de crédito",
+    "estado": "Entregado",
+    "tiempoCompra": "2026-07-09T00:00:00"
+  },
+  {
+    "idVenta": "7651ae00-9bb5-4e77-8be4-d6b52b9e3af3",
+    "codigoPedido": "PED-1009",
+    "fecha": "11/07/2026",
+    "hora": "16:33:00",
+    "cliente": "Santiago Morales",
+    "ciudad": "Pereira",
+    "productos": [
+      {
+        "id": "32",
+        "nombre": "Flan de Caramelo",
+        "categoria": "Postres Fríos",
+        "precio": 9000,
+        "cantidad": 1
+      },
+      {
+        "id": "20",
+        "nombre": "Dona de Chocolate",
+        "categoria": "Donas",
+        "precio": 6000,
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 15000,
+    "descuento": 0,
+    "total": 15000,
+    "metodoPago": "Efectivo contraentrega",
+    "estado": "Entregado",
+    "tiempoCompra": "2026-07-11T00:00:00"
+  },
+  {
+    "idVenta": "d35809c0-f5cc-4896-97c6-4ce32f6c7840",
+    "codigoPedido": "PED-1022",
+    "fecha": "12/07/2026",
+    "hora": "10:54:00",
+    "cliente": "Camila Rojas",
+    "ciudad": "Bucaramanga",
+    "productos": [
+      {
+        "id": "20",
+        "nombre": "Dona de Chocolate",
+        "categoria": "Donas",
+        "precio": 6000,
+        "cantidad": 2
+      },
+      {
+        "id": "4",
+        "nombre": "Torta de Chocolate",
+        "categoria": "Tortas",
+        "precio": 65000,
+        "cantidad": 1
+      },
+      {
+        "id": "3",
+        "nombre": "Cheesecake de Fresa",
+        "categoria": "Tortas",
+        "precio": 72000,
+        "cantidad": 1
+      },
+      {
+        "id": "7",
+        "nombre": "Cupcake Vainilla",
+        "categoria": "Cupcakes",
+        "precio": 6500,
+        "cantidad": 2
+      }
+    ],
+    "subtotal": 162000,
+    "descuento": 16200,
+    "total": 145800,
+    "metodoPago": "Efectivo contraentrega",
+    "estado": "Preparando",
+    "tiempoCompra": "2026-07-12T00:00:00"
+  },
+  {
+    "idVenta": "0af55bd3-b4dd-4959-a225-5c13611d8fc7",
+    "codigoPedido": "PED-1046",
+    "fecha": "12/07/2026",
+    "hora": "12:11:00",
+    "cliente": "Felipe Ortiz",
+    "ciudad": "Bogotá",
+    "productos": [
+      {
+        "id": "29",
+        "nombre": "Alfajor",
+        "categoria": "Galletas",
+        "precio": 5000,
+        "cantidad": 3
+      }
+    ],
+    "subtotal": 15000,
+    "descuento": 0,
+    "total": 15000,
+    "metodoPago": "Tarjeta de crédito",
+    "estado": "Pendiente",
+    "tiempoCompra": "2026-07-12T00:00:00"
+  },
+  {
+    "idVenta": "1e6b92f7-32f5-4a4e-89f7-cc19319b2dbf",
+    "codigoPedido": "PED-1047",
+    "fecha": "12/07/2026",
+    "hora": "18:33:00",
+    "cliente": "Julián Herrera",
+    "ciudad": "Cali",
+    "productos": [
+      {
+        "id": "25",
+        "nombre": "Macaron Frambuesa",
+        "categoria": "Galletas",
+        "precio": 4500,
+        "cantidad": 1
+      },
+      {
+        "id": "30",
+        "nombre": "Galleta Red Velvet",
+        "categoria": "Galletas",
+        "precio": 4500,
+        "cantidad": 3
+      }
+    ],
+    "subtotal": 18000,
+    "descuento": 0,
+    "total": 18000,
+    "metodoPago": "Transferencia",
+    "estado": "Enviado",
+    "tiempoCompra": "2026-07-12T00:00:00"
+  },
+  {
+    "idVenta": "37128844-acd0-4694-9c50-5f98057aa2da",
+    "codigoPedido": "PED-1025",
+    "fecha": "14/07/2026",
+    "hora": "08:20:00",
+    "cliente": "Laura Castro",
+    "ciudad": "Cúcuta",
+    "productos": [
+      {
+        "id": "15",
+        "nombre": "Brownie Oreo",
+        "categoria": "Brownies",
+        "precio": 10000,
+        "cantidad": 2
+      },
+      {
+        "id": "22",
+        "nombre": "Dona de Canela",
+        "categoria": "Donas",
+        "precio": 5500,
+        "cantidad": 2
+      }
+    ],
+    "subtotal": 31000,
+    "descuento": 0,
+    "total": 31000,
+    "metodoPago": "PSE",
+    "estado": "Entregado",
+    "tiempoCompra": "2026-07-14T00:00:00"
+  },
+  {
+    "idVenta": "b5d6c4a4-7eb8-41b1-923d-34dca9db2291",
+    "codigoPedido": "PED-1019",
+    "fecha": "15/07/2026",
+    "hora": "14:51:00",
+    "cliente": "Camila Rojas",
+    "ciudad": "Bucaramanga",
+    "productos": [
+      {
+        "id": "1",
+        "nombre": "Torta Red Velvet",
+        "categoria": "Tortas",
+        "precio": 68000,
+        "cantidad": 1
+      },
+      {
+        "id": "3",
+        "nombre": "Cheesecake de Fresa",
+        "categoria": "Tortas",
+        "precio": 72000,
+        "cantidad": 3
+      },
+      {
+        "id": "18",
+        "nombre": "Brownie Nutella",
+        "categoria": "Brownies",
+        "precio": 11000,
+        "cantidad": 3
+      },
+      {
+        "id": "8",
+        "nombre": "Cupcake Red Velvet",
+        "categoria": "Cupcakes",
+        "precio": 7500,
+        "cantidad": 2
+      }
+    ],
+    "subtotal": 332000,
+    "descuento": 33200,
+    "total": 298800,
+    "metodoPago": "Tarjeta de crédito",
+    "estado": "Enviado",
+    "tiempoCompra": "2026-07-15T00:00:00"
+  },
+  {
+    "idVenta": "9665df4a-48f0-4a63-8b52-d62707921b89",
+    "codigoPedido": "PED-1012",
+    "fecha": "16/07/2026",
+    "hora": "18:08:00",
+    "cliente": "Sofía Navarro",
+    "ciudad": "Cartagena",
+    "productos": [
+      {
+        "id": "20",
+        "nombre": "Dona de Chocolate",
+        "categoria": "Donas",
+        "precio": 6000,
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 6000,
+    "descuento": 0,
+    "total": 6000,
+    "metodoPago": "Transferencia",
+    "estado": "Cancelado",
+    "tiempoCompra": "2026-07-16T00:00:00"
+  },
+  {
+    "idVenta": "4283dd5c-c33c-494c-aa5f-66007a0da58b",
+    "codigoPedido": "PED-1014",
+    "fecha": "16/07/2026",
+    "hora": "20:09:00",
+    "cliente": "Camila Rojas",
+    "ciudad": "Bucaramanga",
+    "productos": [
+      {
+        "id": "23",
+        "nombre": "Dona Red Velvet",
+        "categoria": "Donas",
+        "precio": 7500,
+        "cantidad": 2
+      }
+    ],
+    "subtotal": 15000,
+    "descuento": 0,
+    "total": 15000,
+    "metodoPago": "PSE",
+    "estado": "Preparando",
+    "tiempoCompra": "2026-07-16T00:00:00"
+  },
+  {
+    "idVenta": "c3296095-7a93-4fba-823e-ab61b400fc58",
+    "codigoPedido": "PED-1021",
+    "fecha": "16/07/2026",
+    "hora": "10:39:00",
+    "cliente": "Carlos Pérez",
+    "ciudad": "Medellín",
+    "productos": [
+      {
+        "id": "3",
+        "nombre": "Cheesecake de Fresa",
+        "categoria": "Tortas",
+        "precio": 72000,
+        "cantidad": 3
+      },
+      {
+        "id": "8",
+        "nombre": "Cupcake Red Velvet",
+        "categoria": "Cupcakes",
+        "precio": 7500,
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 223500,
+    "descuento": 22350,
+    "total": 201150,
+    "metodoPago": "Efectivo contraentrega",
+    "estado": "Entregado",
+    "tiempoCompra": "2026-07-16T00:00:00"
+  },
+  {
+    "idVenta": "ee1f3360-9fcc-4485-967d-dfab7bbd75c3",
+    "codigoPedido": "PED-1007",
+    "fecha": "17/07/2026",
+    "hora": "11:51:00",
+    "cliente": "Ana Torres",
+    "ciudad": "Cali",
+    "productos": [
+      {
+        "id": "3",
+        "nombre": "Cheesecake de Fresa",
+        "categoria": "Tortas",
+        "precio": 72000,
+        "cantidad": 1
+      },
+      {
+        "id": "4",
+        "nombre": "Torta de Chocolate",
+        "categoria": "Tortas",
+        "precio": 65000,
+        "cantidad": 1
+      },
+      {
+        "id": "29",
+        "nombre": "Alfajor",
+        "categoria": "Galletas",
+        "precio": 5000,
+        "cantidad": 1
+      },
+      {
+        "id": "27",
+        "nombre": "Galleta Chispas de Chocolate",
+        "categoria": "Galletas",
+        "precio": 4000,
+        "cantidad": 3
+      }
+    ],
+    "subtotal": 154000,
+    "descuento": 15400,
+    "total": 138600,
+    "metodoPago": "Tarjeta de crédito",
+    "estado": "Entregado",
+    "tiempoCompra": "2026-07-17T00:00:00"
+  },
+  {
+    "idVenta": "4e4849fe-8b2e-4cdc-931d-772cd474228f",
+    "codigoPedido": "PED-1010",
+    "fecha": "17/07/2026",
+    "hora": "15:48:00",
+    "cliente": "Laura Castro",
+    "ciudad": "Cúcuta",
+    "productos": [
+      {
+        "id": "18",
+        "nombre": "Brownie Nutella",
+        "categoria": "Brownies",
+        "precio": 11000,
+        "cantidad": 2
+      },
+      {
+        "id": "7",
+        "nombre": "Cupcake Vainilla",
+        "categoria": "Cupcakes",
+        "precio": 6500,
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 28500,
+    "descuento": 0,
+    "total": 28500,
+    "metodoPago": "Transferencia",
+    "estado": "Entregado",
+    "tiempoCompra": "2026-07-17T00:00:00"
+  },
+  {
+    "idVenta": "cf5e0885-8d16-4674-9874-8295c8ae8a8c",
+    "codigoPedido": "PED-1058",
+    "fecha": "17/07/2026",
+    "hora": "09:03:00",
+    "cliente": "Felipe Ortiz",
+    "ciudad": "Bogotá",
+    "productos": [
+      {
+        "id": "33",
+        "nombre": "Pie de Limón",
+        "categoria": "Postres Fríos",
+        "precio": 11000,
+        "cantidad": 2
+      },
+      {
+        "id": "6",
+        "nombre": "Torta Milhojas",
+        "categoria": "Tortas",
+        "precio": 75000,
+        "cantidad": 1
+      },
+      {
+        "id": "16",
+        "nombre": "Brownie Doble Chocolate",
+        "categoria": "Brownies",
+        "precio": 10500,
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 107500,
+    "descuento": 10750,
+    "total": 96750,
+    "metodoPago": "Efectivo contraentrega",
+    "estado": "Pendiente",
+    "tiempoCompra": "2026-07-17T00:00:00"
+  }
+]

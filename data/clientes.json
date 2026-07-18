@@ -1,0 +1,42 @@
+[
+  {
+    "id": "C001",
+    "nombre": "María Gómez",
+    "correo": "maria.gomez@email.com",
+    "telefono": "3001112233",
+    "pedidos": 15,
+    "fechaCreacion": "2026-01-10T00:00:00.000Z"
+  },
+  {
+    "id": "C002",
+    "nombre": "Carlos Pérez",
+    "correo": "carlos.perez@email.com",
+    "telefono": "3019876543",
+    "pedidos": 8,
+    "fechaCreacion": "2026-02-03T00:00:00.000Z"
+  },
+  {
+    "id": "C003",
+    "nombre": "Ana Torres",
+    "correo": "ana.torres@email.com",
+    "telefono": "3204567890",
+    "pedidos": 20,
+    "fechaCreacion": "2026-01-22T00:00:00.000Z"
+  },
+  {
+    "id": "C004",
+    "nombre": "Luis Ramírez",
+    "correo": "luis.ramirez@email.com",
+    "telefono": "3111234567",
+    "pedidos": 5,
+    "fechaCreacion": "2026-03-15T00:00:00.000Z"
+  },
+  {
+    "id": "C005",
+    "nombre": "Camila Rojas",
+    "correo": "camila.rojas@email.com",
+    "telefono": "3157654321",
+    "pedidos": 12,
+    "fechaCreacion": "2026-02-28T00:00:00.000Z"
+  }
+]
