@@ -496,6 +496,147 @@ customElements.define(
     CheckoutSection
 );
 
+
+/* ============================================================
+   CHECKOUT PAGE
+============================================================ */
+
+class CheckoutPage extends BaseComponent {
+
+    render() {
+
+        this.dispatchEvent(
+
+            new CustomEvent("checkout-page-ready", {
+
+                bubbles: true
+
+            })
+
+        );
+
+    }
+
+}
+
+customElements.define(
+    "checkout-page",
+    CheckoutPage
+);
+
+
+/* ============================================================
+   PRODUCT CATALOG
+============================================================ */
+
+class ProductCatalog extends BaseComponent {
+
+    render() {
+
+        this.dispatchEvent(
+
+            new CustomEvent("catalog-ready", {
+
+                bubbles: true
+
+            })
+
+        );
+
+    }
+
+}
+
+customElements.define(
+    "product-catalog",
+    ProductCatalog
+);
+
+
+/* ============================================================
+   ABOUT US
+============================================================ */
+
+class AboutUs extends BaseComponent {
+
+    render() {
+
+        this.dispatchEvent(
+
+            new CustomEvent("about-ready", {
+
+                bubbles: true
+
+            })
+
+        );
+
+    }
+
+}
+
+customElements.define(
+    "about-us",
+    AboutUs
+);
+
+
+/* ============================================================
+   CONTACT SECTION
+============================================================ */
+
+class ContactSection extends BaseComponent {
+
+    render() {
+
+        this.dispatchEvent(
+
+            new CustomEvent("contact-ready", {
+
+                bubbles: true
+
+            })
+
+        );
+
+    }
+
+}
+
+customElements.define(
+    "contact-section",
+    ContactSection
+);
+
+
+/* ============================================================
+   APP FOOTER
+============================================================ */
+
+class AppFooter extends BaseComponent {
+
+    render() {
+
+        this.dispatchEvent(
+
+            new CustomEvent("footer-ready", {
+
+                bubbles: true
+
+            })
+
+        );
+
+    }
+
+}
+
+customElements.define(
+    "app-footer",
+    AppFooter
+);
+
+
 /* ============================================================
    SINCRONIZACIÓN
 ============================================================ */

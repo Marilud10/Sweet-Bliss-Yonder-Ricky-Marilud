@@ -2335,6 +2335,611 @@ const numeroPedidos = () =>
 
 
 /* ============================================================
+   WEB COMPONENTS DE SECCIÓN
+   (contenedores de layout referidos desde admin.html)
+============================================================ */
+
+/* ============================================================
+   ADMIN HEADER
+============================================================ */
+
+class AdminHeader extends BaseComponent {
+
+    render() {
+
+        this.innerHTML = `
+
+            <header class="admin-header">
+
+                <section class="admin-header__brand">
+                    <h1>Sweet Dreams Admin</h1>
+                </section>
+
+                <nav class="admin-navigation">
+                    <ul>
+                        <li><a href="#dashboard">Dashboard</a></li>
+                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="#categorias">Categorías</a></li>
+                        <li><a href="#pedidos">Pedidos</a></li>
+                        <li><a href="#clientes">Clientes</a></li>
+                        <li><a href="#promociones">Promociones</a></li>
+                    </ul>
+                </nav>
+
+                <section class="admin-user">
+                    <article>
+                        <h3>Administrador</h3>
+                        <p>admin@sweetdreams.com</p>
+                    </article>
+                    <button id="btnCerrarSesion">Cerrar Sesión</button>
+                </section>
+
+            </header>
+
+        `;
+
+    }
+
+}
+
+customElements.define(
+    "admin-header",
+    AdminHeader
+);
+
+
+/* ============================================================
+   DASHBOARD HOME
+============================================================ */
+
+class DashboardHome extends BaseComponent {
+
+    render() {
+
+        this.innerHTML = `
+
+            <section class="dashboard-home">
+
+                <header class="section-header">
+                    <h2>Panel de Control</h2>
+                    <p>Resumen general de la tienda.</p>
+                </header>
+
+                <section class="dashboard-cards" id="dashboard"></section>
+
+                <section class="dashboard-summary">
+
+                    <article>
+                        <h3>Productos Más Vendidos</h3>
+                        <ol id="topProductos"></ol>
+                    </article>
+
+                    <article>
+                        <h3>Últimos Pedidos</h3>
+                        <ul id="ultimosPedidos"></ul>
+                    </article>
+
+                </section>
+
+            </section>
+
+        `;
+
+        this.renderResumen();
+
+    }
+
+    renderResumen() {
+
+        const ventas =
+            StorageManager.get(STORAGE_KEYS.VENTAS);
+
+        const topOl =
+            this.querySelector("#topProductos");
+
+        const pedidosUl =
+            this.querySelector("#ultimosPedidos");
+
+        if (topOl) {
+
+            const conteo = {};
+
+            ventas.forEach(venta => {
+
+                (venta.productos ?? []).forEach(producto => {
+
+                    conteo[producto.nombre] =
+                        (conteo[producto.nombre] ?? 0) +
+                        producto.cantidad;
+
+                });
+
+            });
+
+            const top = Object.entries(conteo)
+                .sort((a, b) => b[1] - a[1])
+                .slice(0, 5);
+
+            topOl.innerHTML = top.length
+                ? top.map(([nombre]) =>
+                    `<li>${nombre}</li>`
+                  ).join("")
+                : "<li>Sin datos aún</li>";
+
+        }
+
+        if (pedidosUl) {
+
+            const ultimos = [...ventas]
+                .slice(-5)
+                .reverse();
+
+            pedidosUl.innerHTML = ultimos.length
+                ? ultimos.map(venta =>
+                    `<li>Pedido #${venta.codigoPedido}</li>`
+                  ).join("")
+                : "<li>Sin pedidos aún</li>";
+
+        }
+
+    }
+
+}
+
+customElements.define(
+    "dashboard-home",
+    DashboardHome
+);
+
+
+/* ============================================================
+   DASHBOARD PRODUCTS
+============================================================ */
+
+class DashboardProducts extends BaseComponent {
+
+    render() {
+
+        const categorias =
+            StorageManager.get(STORAGE_KEYS.CATEGORIAS);
+
+        const opciones = categorias
+            .map(categoria =>
+                `<option value="${categoria.nombre}">${categoria.nombre}</option>`
+            )
+            .join("");
+
+        this.innerHTML = `
+
+            <section class="dashboard-products" id="productos">
+
+                <header class="section-header">
+                    <h2>Gestión de Productos</h2>
+                </header>
+
+                <section class="products-toolbar">
+                    <button id="btnAgregarProducto">Agregar Producto</button>
+                    <button id="btnImportarProductos">Importar Productos</button>
+                    <button id="btnExportarProductos">Exportar Productos</button>
+                </section>
+
+                <section class="products-search">
+
+                    <label for="buscar-producto">Buscar Producto</label>
+                    <input
+                        type="search"
+                        id="buscar-producto"
+                        placeholder="Buscar...">
+
+                    <label for="filtro-categoria">Categoría</label>
+                    <select id="filtro-categoria">
+                        <option value="todos">Todas</option>
+                        ${opciones}
+                    </select>
+
+                </section>
+
+                <section class="products-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Producto</th>
+                                <th>Categoría</th>
+                                <th>Precio</th>
+                                <th>Stock</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabla-productos"></tbody>
+                    </table>
+                </section>
+
+            </section>
+
+        `;
+
+    }
+
+}
+
+customElements.define(
+    "dashboard-products",
+    DashboardProducts
+);
+
+
+/* ============================================================
+   DASHBOARD CATEGORIES
+============================================================ */
+
+class DashboardCategories extends BaseComponent {
+
+    render() {
+
+        this.innerHTML = `
+
+            <section class="dashboard-categories" id="categorias">
+
+                <header class="section-header">
+                    <h2>Categorías</h2>
+                    <p>Administra las categorías disponibles en la tienda.</p>
+                </header>
+
+                <section class="categories-toolbar">
+                    <button id="btnNuevaCategoria">Nueva Categoría</button>
+                </section>
+
+                <section class="categories-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Categoría</th>
+                                <th>Productos</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabla-categorias"></tbody>
+                    </table>
+                </section>
+
+            </section>
+
+        `;
+
+    }
+
+}
+
+customElements.define(
+    "dashboard-categories",
+    DashboardCategories
+);
+
+
+/* ============================================================
+   DASHBOARD ORDERS
+============================================================ */
+
+class DashboardOrders extends BaseComponent {
+
+    render() {
+
+        this.innerHTML = `
+
+            <section class="dashboard-orders" id="pedidos">
+
+                <header class="section-header">
+                    <h2>Pedidos</h2>
+                    <p>Consulta y administra los pedidos realizados.</p>
+                </header>
+
+                <section class="orders-filters">
+
+                    <label for="filtro-ventas">Estado</label>
+                    <select id="filtro-ventas">
+                        <option value="todos">Todos</option>
+                        <option value="Pendiente">Pendiente</option>
+                        <option value="Preparando">Preparando</option>
+                        <option value="Enviado">Enviado</option>
+                        <option value="Entregado">Entregado</option>
+                        <option value="Cancelado">Cancelado</option>
+                    </select>
+
+                    <label for="buscar-venta">Buscar</label>
+                    <input
+                        type="search"
+                        id="buscar-venta"
+                        placeholder="Pedido, cliente o ciudad...">
+
+                </section>
+
+                <section class="orders-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Pedido</th>
+                                <th>Cliente</th>
+                                <th>Fecha</th>
+                                <th>Total</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabla-ventas"></tbody>
+                    </table>
+                </section>
+
+            </section>
+
+        `;
+
+    }
+
+}
+
+customElements.define(
+    "dashboard-orders",
+    DashboardOrders
+);
+
+
+/* ============================================================
+   DASHBOARD CUSTOMERS
+============================================================ */
+
+class DashboardCustomers extends BaseComponent {
+
+    render() {
+
+        const clientesEjemplo = [
+
+            {
+                id: "C001",
+                nombre: "María Gómez",
+                correo: "maria@email.com",
+                telefono: "3001112233",
+                pedidos: 15
+            },
+
+            {
+                id: "C002",
+                nombre: "Carlos Pérez",
+                correo: "carlos@email.com",
+                telefono: "3019876543",
+                pedidos: 8
+            },
+
+            {
+                id: "C003",
+                nombre: "Ana Torres",
+                correo: "ana@email.com",
+                telefono: "3204567890",
+                pedidos: 20
+            }
+
+        ];
+
+        const filas = clientesEjemplo.map(cliente => `
+
+            <tr>
+                <td>${cliente.id}</td>
+                <td>${cliente.nombre}</td>
+                <td>${cliente.correo}</td>
+                <td>${cliente.telefono}</td>
+                <td>${cliente.pedidos}</td>
+                <td>
+                    <button class="btn-ver-cliente" data-id="${cliente.id}">Ver</button>
+                    <button class="btn-editar-cliente" data-id="${cliente.id}">Editar</button>
+                </td>
+            </tr>
+
+        `).join("");
+
+        this.innerHTML = `
+
+            <section class="dashboard-customers" id="clientes">
+
+                <header class="section-header">
+                    <h2>Clientes</h2>
+                    <p>Información de los clientes registrados.</p>
+                </header>
+
+                <section class="customers-search">
+                    <label for="customerSearch">Buscar Cliente</label>
+                    <input
+                        type="search"
+                        id="customerSearch"
+                        placeholder="Nombre o correo">
+                </section>
+
+                <section class="customers-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Correo</th>
+                                <th>Teléfono</th>
+                                <th>Pedidos</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabla-clientes">
+                            ${filas}
+                        </tbody>
+                    </table>
+                </section>
+
+            </section>
+
+        `;
+
+    }
+
+}
+
+customElements.define(
+    "dashboard-customers",
+    DashboardCustomers
+);
+
+
+/* ============================================================
+   DASHBOARD PROMOTIONS
+============================================================ */
+
+class DashboardPromotions extends BaseComponent {
+
+    render() {
+
+        const promocionesEjemplo = [
+
+            {
+                id: "PR001",
+                nombre: "2x1 Cupcakes",
+                descuento: "50%",
+                aplicaA: "Cupcakes",
+                inicio: "01/07/2026",
+                fin: "31/07/2026",
+                estado: "Activa"
+            },
+
+            {
+                id: "PR002",
+                nombre: "Descuento Tortas",
+                descuento: "15%",
+                aplicaA: "Tortas",
+                inicio: "15/07/2026",
+                fin: "20/07/2026",
+                estado: "Activa"
+            },
+
+            {
+                id: "PR003",
+                nombre: "Combo Familiar",
+                descuento: "20%",
+                aplicaA: "Todos",
+                inicio: "10/07/2026",
+                fin: "25/07/2026",
+                estado: "Programada"
+            }
+
+        ];
+
+        const filas = promocionesEjemplo.map(promocion => `
+
+            <tr>
+                <td>${promocion.id}</td>
+                <td>${promocion.nombre}</td>
+                <td>${promocion.descuento}</td>
+                <td>${promocion.aplicaA}</td>
+                <td>${promocion.inicio}</td>
+                <td>${promocion.fin}</td>
+                <td>${promocion.estado}</td>
+                <td>
+                    <button class="btn-ver-promocion" data-id="${promocion.id}">Ver</button>
+                    <button class="btn-editar-promocion" data-id="${promocion.id}">Editar</button>
+                    <button class="btn-eliminar-promocion" data-id="${promocion.id}">Eliminar</button>
+                </td>
+            </tr>
+
+        `).join("");
+
+        this.innerHTML = `
+
+            <section class="dashboard-promotions" id="promociones">
+
+                <header class="section-header">
+                    <h2>Gestión de Promociones</h2>
+                    <p>Administra los descuentos y promociones de la tienda.</p>
+                </header>
+
+                <section class="promotions-toolbar">
+                    <button id="newPromotionButton">Nueva Promoción</button>
+                </section>
+
+                <section class="promotions-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Promoción</th>
+                                <th>Descuento</th>
+                                <th>Aplica a</th>
+                                <th>Inicio</th>
+                                <th>Finaliza</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabla-promociones">
+                            ${filas}
+                        </tbody>
+                    </table>
+                </section>
+
+            </section>
+
+        `;
+
+    }
+
+}
+
+customElements.define(
+    "dashboard-promotions",
+    DashboardPromotions
+);
+
+
+/* ============================================================
+   ADMIN FOOTER
+============================================================ */
+
+class AdminFooter extends BaseComponent {
+
+    render() {
+
+        this.innerHTML = `
+
+            <footer class="admin-footer">
+
+                <section class="admin-footer__content">
+
+                    <article>
+                        <h3>Sweet Dreams</h3>
+                        <p>Panel Administrativo</p>
+                    </article>
+
+                    <article>
+                        <p>Versión 1.0</p>
+                    </article>
+
+                    <article>
+                        <p>© 2026 Todos los derechos reservados.</p>
+                    </article>
+
+                </section>
+
+            </footer>
+
+        `;
+
+    }
+
+}
+
+customElements.define(
+    "admin-footer",
+    AdminFooter
+);
+
+
+/* ============================================================
    REFRESCAR TODO
 ============================================================ */
 
