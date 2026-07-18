@@ -287,11 +287,100 @@ class AppHeader extends BaseComponent {
 
     render() {
 
+        this.innerHTML = `
+
+            <header class="app-header">
+
+                <section class="app-header__brand">
+                    <a href="#inicio">
+                        <h1>Sweet Dreams</h1>
+                    </a>
+                </section>
+
+                <button
+                    class="app-header__toggle"
+                    id="menuToggle"
+                    aria-label="Abrir menú"
+                    aria-expanded="false">
+                    ☰
+                </button>
+
+                <nav class="app-navigation" id="appNav">
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#destacados">Destacados</a></li>
+                        <li><a href="#catalogo">Catálogo</a></li>
+                        <li><a href="#promociones">Promociones</a></li>
+                        <li><a href="#novedades">Novedades</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+
+                <section class="app-header__actions">
+                    <a
+                        href="#carrito"
+                        class="cart-icon"
+                        aria-label="Ver carrito de compras">
+                        🛒
+                        <span id="cart-count">0</span>
+                    </a>
+                </section>
+
+            </header>
+
+        `;
+
+        this.registrarEventos();
+
         this.dispatchEvent(
             new CustomEvent("header-ready", {
                 bubbles: true
             })
         );
+
+    }
+
+    registrarEventos() {
+
+        const boton =
+            this.querySelector("#menuToggle");
+
+        const nav =
+            this.querySelector("#appNav");
+
+        if (!boton || !nav) return;
+
+        boton.addEventListener("click", () => {
+
+            const abierto =
+                nav.classList.toggle("is-open");
+
+            boton.setAttribute(
+                "aria-expanded",
+                abierto
+            );
+
+        });
+
+        nav.querySelectorAll("a")
+            .forEach(enlace => {
+
+                enlace.addEventListener(
+                    "click",
+                    () => {
+
+                        nav.classList.remove("is-open");
+
+                        boton.setAttribute(
+                            "aria-expanded",
+                            false
+                        );
+
+                    }
+                );
+
+            });
 
     }
 
