@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Promoción Especial</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px;
+            background-color: #f3f8fd;
+            font-family: "Work Sans", "Segoe UI", Arial, sans-serif;
+            color: #1b2733;
+        }
+
+        .email-container {
+            max-width: 650px;
+            margin: auto;
+            background-color: #ffffff;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 20px 45px -20px rgba(16, 35, 63, 0.45);
+        }
+
+        /* BRAND */
+
+        .brand {
+            background-color: #ffffff;
+            text-align: center;
+            padding: 22px 30px 0;
+        }
+
+        .brand span {
+            font-family: "Fraunces", "Iowan Old Style", Georgia, serif;
+            font-style: italic;
+            font-weight: 500;
+            font-size: 22px;
+            color: #1d4c8b;
+        }
+
+        .scallop {
+            height: 20px;
+            background-image: radial-gradient(circle at 10px 0, transparent 9px, #1d4c8b 9px, #1d4c8b 10px, transparent 10px);
+            background-size: 20px 20px;
+            background-position: center top;
+            background-repeat: repeat-x;
+            margin-top: 18px;
+        }
+
+        /* HEADER */
+
+        .header {
+            background: linear-gradient(135deg, #1d4c8b, #10233f);
+            color: #ffffff;
+            text-align: center;
+            padding: 45px 30px;
+        }
+
+        .header .emoji {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .header h1 {
+            font-family: "Fraunces", "Iowan Old Style", Georgia, serif;
+            font-weight: 600;
+            font-size: 34px;
+            margin-bottom: 12px;
+        }
+
+        .header p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #dbe9fa;
+        }
+
+        /* PROMOTION */
+
+        .promotion {
+            background-color: #f3f8fd;
+            text-align: center;
+            padding: 35px 25px;
+        }
+
+        .promotion h2 {
+            font-family: "Fraunces", "Iowan Old Style", Georgia, serif;
+            font-weight: 600;
+            color: #10233f;
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .promotion p {
+            font-size: 17px;
+            line-height: 1.7;
+            color: #52667e;
+        }
+
+        .offer {
+            display: inline-block;
+            margin: 25px auto;
+            padding: 18px 35px;
+            background-color: #1d4c8b;
+            color: #ffffff;
+            border-radius: 14px;
+            font-size: 32px;
+            font-weight: bold;
+            box-shadow: 0 12px 30px -18px rgba(16, 35, 63, 0.55);
+        }
+
+        /* CONTENT */
+
+        .content {
+            padding: 40px;
+        }
+
+        .content h3 {
+            font-family: "Fraunces", "Iowan Old Style", Georgia, serif;
+            font-weight: 600;
+            font-size: 24px;
+            color: #10233f;
+            margin-bottom: 18px;
+        }
+
+        .content p {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #3c4a5c;
+            margin-bottom: 20px;
+        }
+
+        .content p strong {
+            color: #1d4c8b;
+        }
+
+        /* PRODUCT CARDS */
+
+        .products {
+            margin: 30px 0;
+        }
+
+        .product {
+            background-color: #f3f8fd;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 14px;
+            border: 1px solid #dbe9fa;
+            border-left: 5px solid #1d4c8b;
+        }
+
+        .product h4 {
+            font-family: "Fraunces", "Iowan Old Style", Georgia, serif;
+            font-weight: 600;
+            color: #10233f;
+            font-size: 19px;
+            margin-bottom: 8px;
+        }
+
+        .product p {
+            margin: 0;
+            font-size: 15px;
+            line-height: 1.5;
+            color: #52667e;
+        }
+
+        /* CTA */
+
+        .cta {
+            text-align: center;
+            margin: 40px 0 20px;
+        }
+
+        .cta a {
+            display: inline-block;
+            padding: 16px 40px;
+            background-color: #1d4c8b;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 999px;
+            font-size: 19px;
+            font-weight: 600;
+            box-shadow: 0 12px 30px -18px rgba(16, 35, 63, 0.55);
+        }
+
+        .cta a:hover {
+            background-color: #10233f;
+        }
+
+        /* FOOTER */
+
+        .footer {
+            background-color: #10233f;
+            color: #dbe9fa;
+            text-align: center;
+            padding: 30px 25px;
+        }
+
+        .footer p {
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .footer strong {
+            color: #6fa6e0;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 650px) {
+
+            body {
+                padding: 10px;
+            }
+
+            .header {
+                padding: 35px 20px;
+            }
+
+            .header h1 {
+                font-size: 27px;
+            }
+
+            .header p {
+                font-size: 16px;
+            }
+
+            .promotion {
+                padding: 30px 20px;
+            }
+
+            .promotion h2 {
+                font-size: 25px;
+            }
+
+            .offer {
+                font-size: 27px;
+                padding: 15px 25px;
+            }
+
+            .content {
+                padding: 25px 20px;
+            }
+
+            .content h3 {
+                font-size: 22px;
+            }
+
+            .cta a {
+                display: block;
+                width: 100%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="email-container">
+
+        <!-- BRAND -->
+
+        <div class="brand">
+
+            <span>Sweet Dreams</span>
+
+            <div class="scallop"></div>
+
+        </div>
+
+
+        <!-- HEADER -->
+
+        <div class="header">
+
+            <div class="emoji">
+                🍰🍫🧁
+            </div>
+
+            <h1>
+                ¡Alerta de antojo!
+            </h1>
+
+            <p>
+                Hay algo delicioso esperando por ti...
+                y no queremos que te lo pierdas.
+            </p>
+
+        </div>
+
+
+        <!-- PROMOTION -->
+
+        <div class="promotion">
+
+            <h2>
+                🔥 ¡Promoción Especial!
+            </h2>
+
+            <p>
+                Esta semana queremos hacer que tus momentos
+                sean mucho más dulces.
+            </p>
+
+            <div class="offer">
+                20% OFF
+            </div>
+
+            <p>
+                Aprovecha nuestro descuento especial
+                en productos seleccionados.
+            </p>
+
+        </div>
+
+
+        <!-- CONTENT -->
+
+        <div class="content">
+
+            <!-- PAS: PROBLEMA -->
+
+            <h3>
+                ¿Otra vez con ganas de algo dulce? 😋
+            </h3>
+
+            <p>
+                Ese antojo aparece de repente...
+                pero cuando buscas qué comer,
+                terminas viendo las mismas opciones de siempre.
+            </p>
+
+
+            <!-- PAS: AGITACIÓN -->
+
+            <h3>
+                Y cuanto más lo piensas... ¡más ganas tienes! 🤭
+            </h3>
+
+            <p>
+                Porque un antojo no espera.
+                Y mucho menos cuando imaginas el sabor
+                de un brownie recién horneado o una torta de chocolate.
+            </p>
+
+            <p>
+                Dejarlo para después puede significar
+                perder la oportunidad de disfrutar tu postre favorito.
+            </p>
+
+
+            <!-- PAS: SOLUCIÓN -->
+
+            <h3>
+                Nosotros tenemos una solución deliciosa 🍰
+            </h3>
+
+            <p>
+                Preparamos una selección especial de nuestros
+                productos favoritos para que puedas darte
+                ese gustico que tanto estabas esperando.
+            </p>
+
+
+            <!-- PRODUCTS -->
+
+            <div class="products">
+
+                <div class="product">
+
+                    <h4>
+                        🍫 Brownies de Chocolate
+                    </h4>
+
+                    <p>
+                        Suaves, chocolatosos y perfectos
+                        para acompañar tu café.
+                    </p>
+
+                </div>
+
+
+                <div class="product">
+
+                    <h4>
+                        🧁 Cupcakes Especiales
+                    </h4>
+
+                    <p>
+                        Pequeños, deliciosos y perfectos
+                        para compartir... o no. 😏
+                    </p>
+
+                </div>
+
+
+                <div class="product">
+
+                    <h4>
+                        🍰 Tortas Artesanales
+                    </h4>
+
+                    <p>
+                        Una opción ideal para celebrar
+                        cualquier momento especial.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <p>
+                Y lo mejor de todo:
+                <strong>¡puedes disfrutarlos con un 20% de descuento!</strong>
+            </p>
+
+
+            <!-- CTA -->
+
+            <div class="cta">
+
+                <a href="#">
+                    🍰 Aprovechar mi 20% OFF
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER / POSTDATA -->
+
+        <div class="footer">
+
+            <p>
+                🎉 No necesitas una ocasión especial
+                para disfrutar un buen postre.
+            </p>
+
+            <p>
+                <strong>P.D.</strong>
+                Esta promoción estará disponible
+                solo por tiempo limitado y aplica a
+                productos seleccionados.
+                ¡Corre antes de que se acaben! 🍫🔥
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

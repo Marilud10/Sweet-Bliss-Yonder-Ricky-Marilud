@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nuevos Productos</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px;
+            background-color: #f3f8fd;
+            font-family: "Work Sans", "Segoe UI", Arial, sans-serif;
+            color: #1b2733;
+        }
+
+        .email-container {
+            max-width: 650px;
+            margin: auto;
+            background-color: #ffffff;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 20px 45px -20px rgba(16, 35, 63, 0.45);
+        }
+
+        /* BRAND */
+
+        .brand {
+            background-color: #ffffff;
+            text-align: center;
+            padding: 22px 30px 0;
+        }
+
+        .brand span {
+            font-family: "Fraunces", "Iowan Old Style", Georgia, serif;
+            font-style: italic;
+            font-weight: 500;
+            font-size: 22px;
+            color: #1d4c8b;
+        }
+
+        .scallop {
+            height: 20px;
+            background-image: radial-gradient(circle at 10px 0, transparent 9px, #1d4c8b 9px, #1d4c8b 10px, transparent 10px);
+            background-size: 20px 20px;
+            background-position: center top;
+            background-repeat: repeat-x;
+            margin-top: 18px;
+        }
+
+        /* HEADER */
+
+        .header {
+            background: linear-gradient(135deg, #1d4c8b, #10233f);
+            color: #ffffff;
+            text-align: center;
+            padding: 45px 30px;
+        }
+
+        .header .emoji {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .header h1 {
+            font-family: "Fraunces", "Iowan Old Style", Georgia, serif;
+            font-weight: 600;
+            font-size: 34px;
+            margin-bottom: 12px;
+        }
+
+        .header p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #dbe9fa;
+        }
+
+        /* NEW BADGE */
+
+        .new-badge {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background-color: #ffffff;
+            color: #1d4c8b;
+            border-radius: 999px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        /* CONTENT */
+
+        .content {
+            padding: 40px;
+        }
+
+        .content h2 {
+            font-family: "Fraunces", "Iowan Old Style", Georgia, serif;
+            font-weight: 600;
+            font-size: 27px;
+            color: #10233f;
+            margin-bottom: 20px;
+        }
+
+        .content h3 {
+            font-family: "Fraunces", "Iowan Old Style", Georgia, serif;
+            font-weight: 600;
+            font-size: 23px;
+            color: #10233f;
+            margin-bottom: 15px;
+        }
+
+        .content p {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #3c4a5c;
+            margin-bottom: 20px;
+        }
+
+        .content p strong {
+            color: #1d4c8b;
+        }
+
+        /* PRODUCT CARDS */
+
+        .products {
+            margin: 30px 0;
+        }
+
+        .product {
+            background-color: #f3f8fd;
+            border-radius: 14px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border: 1px solid #dbe9fa;
+        }
+
+        .product-icon {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .product h4 {
+            font-family: "Fraunces", "Iowan Old Style", Georgia, serif;
+            font-weight: 600;
+            font-size: 21px;
+            color: #10233f;
+            margin-bottom: 10px;
+        }
+
+        .product p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #52667e;
+            margin-bottom: 10px;
+        }
+
+        .product-tag {
+            display: inline-block;
+            padding: 6px 12px;
+            background-color: #1d4c8b;
+            color: #ffffff;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        /* HIGHLIGHT */
+
+        .highlight {
+            background-color: #dbe9fa;
+            padding: 25px;
+            border-radius: 14px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .highlight h3 {
+            color: #1d4c8b;
+            margin-bottom: 12px;
+        }
+
+        .highlight p {
+            margin-bottom: 0;
+            color: #3c4a5c;
+        }
+
+        /* CTA */
+
+        .cta {
+            text-align: center;
+            margin: 40px 0 20px;
+        }
+
+        .cta a {
+            display: inline-block;
+            padding: 16px 40px;
+            background-color: #1d4c8b;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 999px;
+            font-size: 19px;
+            font-weight: 600;
+            box-shadow: 0 12px 30px -18px rgba(16, 35, 63, 0.55);
+        }
+
+        .cta a:hover {
+            background-color: #10233f;
+        }
+
+        /* FOOTER */
+
+        .footer {
+            background-color: #10233f;
+            color: #dbe9fa;
+            text-align: center;
+            padding: 30px 25px;
+        }
+
+        .footer p {
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .footer strong {
+            color: #6fa6e0;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 650px) {
+
+            body {
+                padding: 10px;
+            }
+
+            .header {
+                padding: 35px 20px;
+            }
+
+            .header h1 {
+                font-size: 27px;
+            }
+
+            .header p {
+                font-size: 16px;
+            }
+
+            .content {
+                padding: 25px 20px;
+            }
+
+            .content h2 {
+                font-size: 23px;
+            }
+
+            .content h3 {
+                font-size: 21px;
+            }
+
+            .product {
+                padding: 20px;
+            }
+
+            .cta a {
+                display: block;
+                width: 100%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="email-container">
+
+
+        <!-- BRAND -->
+
+        <div class="brand">
+
+            <span>Sweet Dreams</span>
+
+            <div class="scallop"></div>
+
+        </div>
+
+
+        <!-- HEADER -->
+
+        <div class="header">
+
+            <div class="emoji">
+                🆕🍰🧁
+            </div>
+
+            <h1>
+                ¡Tenemos novedades deliciosas!
+            </h1>
+
+            <p>
+                La familia de postres acaba de crecer...
+                y hay nuevos sabores esperando por ti.
+            </p>
+
+            <div class="new-badge">
+                ✨ NUEVOS PRODUCTOS ✨
+            </div>
+
+        </div>
+
+
+        <!-- CONTENT -->
+
+        <div class="content">
+
+
+            <!-- PAS: PROBLEMA -->
+
+            <h2>
+                ¿Sientes que siempre eliges el mismo postre? 🤔
+            </h2>
+
+            <p>
+                A veces queremos probar algo diferente,
+                pero terminamos pidiendo nuestro postre de siempre.
+            </p>
+
+
+            <!-- PAS: AGITACIÓN -->
+
+            <h3>
+                Y sabemos lo que pasa después... 😅
+            </h3>
+
+            <p>
+                Ves una foto de un nuevo sabor,
+                alguien te cuenta que descubrió un postre increíble
+                y piensas:
+            </p>
+
+            <p>
+                <strong>
+                    "¿Por qué no lo probé antes?"
+                </strong>
+            </p>
+
+            <p>
+                Porque la vida es demasiado corta para comer
+                siempre lo mismo. ¡Es hora de experimentar! 😋
+            </p>
+
+
+            <!-- PAS: SOLUCIÓN -->
+
+            <h3>
+                ¡Por eso tenemos nuevos sabores para ti! 🎉
+            </h3>
+
+            <p>
+                Hemos preparado nuevas opciones para que
+                descubras tu próximo postre favorito.
+            </p>
+
+
+            <!-- PRODUCTS -->
+
+            <div class="products">
+
+
+                <div class="product">
+
+                    <div class="product-icon">
+                        🍫
+                    </div>
+
+                    <h4>
+                        Brownie de Nutella
+                    </h4>
+
+                    <p>
+                        Una combinación irresistible de chocolate
+                        y Nutella en cada bocado.
+                    </p>
+
+                    <span class="product-tag">
+                        🆕 NUEVO
+                    </span>
+
+                </div>
+
+
+                <div class="product">
+
+                    <div class="product-icon">
+                        🧁
+                    </div>
+
+                    <h4>
+                        Cupcake Red Velvet
+                    </h4>
+
+                    <p>
+                        Suave, esponjoso y con una deliciosa
+                        cobertura que te hará querer otro.
+                    </p>
+
+                    <span class="product-tag">
+                        🆕 NUEVO
+                    </span>
+
+                </div>
+
+
+                <div class="product">
+
+                    <div class="product-icon">
+                        🍓
+                    </div>
+
+                    <h4>
+                        Cheesecake de Frutos Rojos
+                    </h4>
+
+                    <p>
+                        Cremoso, fresco y con el equilibrio perfecto
+                        entre dulce y frutal.
+                    </p>
+
+                    <span class="product-tag">
+                        🆕 NUEVO
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- HIGHLIGHT -->
+
+            <div class="highlight">
+
+                <h3>
+                    💡 ¿Cuál será tu nuevo favorito?
+                </h3>
+
+                <p>
+                    Explora nuestras novedades y encuentra
+                    ese postre que todavía no sabías que necesitabas.
+                </p>
+
+            </div>
+
+
+            <!-- CTA -->
+
+            <div class="cta">
+
+                <a href="#">
+                    🍰 Descubrir los nuevos postres
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- FOOTER / POSTDATA -->
+
+        <div class="footer">
+
+            <p>
+                Nuevos sabores, nuevas experiencias
+                y muchas razones para sonreír. ❤️
+            </p>
+
+            <p>
+
+                <strong>P.D.</strong>
+                Los nuevos productos están disponibles
+                en cantidades limitadas durante su lanzamiento.
+                ¡Sé de los primeros en probarlos antes de que vuelen! 🚀🧁
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
